@@ -123,3 +123,25 @@ p,li { /* Aumenta o espaçamento entre linhas de texto. Isso melhora MUITO a lei
     gap: 10px;
     flex-wrap: wrap;
 }
+
+@media (max-width:600px){
+    .container {
+        padding: 24px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px){
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .contact-buttons{
+        flex-direction: column;
+    }
+}
