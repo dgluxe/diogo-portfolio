@@ -1,17 +1,17 @@
-## Portfólio Pessoal
+# Portfólio Pessoal
 
-# Portfólio
+### Portfólio
 
 Site: https://dgluxe.github.io/diogo-portfolio/
 
-# Stack
+### Stack
 HTML
 CSS
 
-# Deploy
+### Deploy
 GitHub Pages (branch main)
 
-# Contato
+### Contato
 GitHub: https://github.com/dgluxe
 Email: seuemail@exemplo.com
 
