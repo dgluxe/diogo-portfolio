@@ -1,6 +1,6 @@
 # Portfólio Pessoal
 
-# Portfólio
+Portfólio
 
 Site: https://dgluxe.github.io/diogo-portfolio/
 
