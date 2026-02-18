@@ -16,12 +16,14 @@ h1 {
     color: #4da3ff;
     font-size: 36px;
     margin-bottom: 8px; /* Espaço abaixo do nome para não colar no subtitulo */
+    text-align: center;
 }
 
 .subtitle { /* Cria um estilo especifico para o subtitulo */
     font-size: 18px;
     color: #bbbbbb;
     margin-bottom: 32px;
+    text-align: center;
 }
 
 h2 {
@@ -37,14 +39,6 @@ p,li { /* Aumenta o espaçamento entre linhas de texto. Isso melhora MUITO a lei
     margin-bottom: 10px;
 }
 
-a {
-    color: #4da3ff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 .cta-text{
     margin-top: 10px;
@@ -81,4 +75,51 @@ a:hover {
 
 .btn-outline:hover {
     background-color: rgba(77, 163, 255, 0.1);
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #0f0f0f;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.card-header h3 {
+    margin: 0;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #1f1f1f;
+    color: #9ecbff;
+    border: 1px solid #2a2a2a;
+}
+
+.card-desc{
+    margin: 12px 0 16px 0;
+    color: #cccccc;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
