@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+    <header class="w-full">
+        <div class="mx-auto flex max-w-7x1 items-center justify-between px-6 py-6">
+            <a href="#" class="text-2x1 font-semibold text-white">DiogoBrasil</a>
 
+            <nav class="flex items-center gap-8 text-sm text-zinc-300">
+                <a href="#"> Sobre </a>
+                <a href="#"> Habilidades </a>
+                <a href="#"> Experiência </a>
+                <a href="#"> Projetos </a>
+                <a href="#"> Contato </a>
+            </nav>
+
+        </div>
+    </header>
     <div class="container">
         <h1>Diogo de Alcantara Brasil</h1>
         <p class="subtitle">Estudante de Engenharia de Software</p>
@@ -22,17 +37,15 @@
         <div class="cards">
             <div class="card">
                 <div class="card-header">
-                    <h3>Portfólio Pessoal</h3>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS </span>
+                    <h3>Sistema de Chamados</h3>
+                    <span class="tag">C#</span>
                 </div>
 
                 <p class="card-desc">
-                    Site criado para apresentar projetos e links importantes.
+                    Programa de Chamados (C# Console) CRUD de chamados (abrir, listar, fechar)
                 </p>
                 <div class="card-actions">
-                    <a class="btn" href="https://dgluxe.github.io/diogo-portfolio/" target="_blank">Ver projeto</a>
-                    <a class="btn btn-outline" href="https://github.com/dgluxe/diogo-portfolio" target="_blank">Ver código</a>
+                    <a class="btn btn-outline" href="https://github.com/dgluxe/ti_chamados" target="_blank">Ver código</a>
                 </div>
             </div>
 
@@ -60,6 +73,7 @@
 
                 <p class="card-desc">
                     Jogo 2D eudcativo desenvolvido no construct para conscientização sobre o ODS 2 (Fome Zero).
+                    Ao entrar no link você verá as instruções de como jogar.
                 </p>
 
                 <div class="card-actions">
@@ -87,11 +101,14 @@
         <div class="contact-buttons">
             <a class="btn"href="https://github.com/dgluxe" target="_blank">
                 GitHub
-
             </a>
          <a class="btn btn-outline" href="mailto: diiogobrasill@gmail.com">
             Enviar email
-        </a>
+         </a>
+
+         <a class="btn" href=" https://wa.me/5511958161124">
+            WhatsApp
+         </a>
         </div>
 
     </div>
