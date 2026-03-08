@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header class="w-full">
-        <div class="mx-auto flex max-w-7x1 items-center justify-between px-6 py-6">
-            <a href="#" class="text-2x1 font-semibold text-white">DiogoBrasil</a>
+    <header id="site-header" class=" fixed top-0 left-0 z-50 w-full">
+        <div class="header-box mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+            <a href="#" class="text-[1.3rem] font-bold font-serif">
+                <span class="text-violet-600">Diogo</span><span class="text-white">Brasil</span>
+            </a>
 
             <nav class="flex items-center gap-8 text-sm text-zinc-300">
-                <a href="#"> Sobre </a>
-                <a href="#"> Habilidades </a>
-                <a href="#"> Experiência </a>
-                <a href="#"> Projetos </a>
-                <a href="#"> Contato </a>
+                <a href="#" class="transition-colors hover:text-violet-400"> Sobre </a>
+                <a href="#" class="transition-colors hover:text-violet-400"> Habilidades </a>
+                <a href="#" class="transition-colors hover:text-violet-400"> Experiência </a>
+                <a href="#" class="transition-colors hover:text-violet-400"> Projetos </a>
+                <a href="#" class="transition-colors hover:text-violet-400"> Contato </a>
             </nav>
-
         </div>
     </header>
-    <div class="container">
-        <h1>Diogo de Alcantara Brasil</h1>
-        <p class="subtitle">Estudante de Engenharia de Software</p>
+    
+    <section class="flex min-h-screen items-center justify-center px-6">
+        <div class="max-w-5xl text-center">
+            <p class="text-sm tracking-[0.3em] text-violet-400 uppercase">
+                Desenvolvedor & Analista de Dados
+            </p>
+            
+            <h1 class="mt-6 text-7xl font-semibold text-white leading-none font-serif">
+                Diogo de Alcantara <br>
+                <span class="block text-violet-400 font-semibold">Brasil</span>
+            </h1>
 
-        <h2>Sobre mim</h2>
-        <p>
-            Estudante de Engenharia de Software com foco em desenvolvimento e lógica de programação.
-        </p>
+            <p class="mx-auto mt-8 max-w-3xl mx-auto text-lg leading-8 text-zinc-400">
+                Estudante de Engenharia de Software com foco em desenvolvimento C#/.NET e banco de dados. Experiência em ambiente corporativo com resolução de problemas, organização e entregas ágeis. 
+            </p>
+
+            <div class="mt-12 flex items-center justify-center gap-5">
+                <a href="#" class="inline-flex min-w-[190px] justify-center rounded-full bg-violet-600 px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-violet-700">
+                    Ver Projetos
+                </a>
+
+                <a href="#" class="inline-flex min-w-[190px] justify-center rounded-full border border-violet-500 px-7 py-3 text-sm font-semibold text-violet-400 transition-all duration-300 hover:border-violet-400 hover:text-violet-300">
+                    Contato     
+                </a>
+            </div>
+
+            <div class="mt-16 flex justify-center">
+                <span class="text-2xl text-violet-400 animate-bounce"> ↓ </span>
+            </div>
+        </div>
+    </section>
+
 
         <h2>Projetos</h2>
 
@@ -112,5 +138,7 @@
         </div>
 
     </div>
+
+<script src="script.js"></script>
 </body>
 </html>

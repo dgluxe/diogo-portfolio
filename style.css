@@ -1,9 +1,27 @@
+#site-header {
+    transition: all 0.3s ease;
+}
+
+#site-header.scrolled {
+   background: transparent;
+}
+
+#site-header.scrolled .header-box {
+    
+    background: rgba(20, 20, 25, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    
+}
+
+
 .container{
     max-width: 900px; /* Define a largura máxima do contéudo*/
     margin: 0 auto; /* Centralizar horiunzontalmente*/
     padding: 40px 20px;
 }
-
 
 body {
     font-family: Arial, sans-serif;
