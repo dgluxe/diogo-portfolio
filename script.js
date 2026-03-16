@@ -35,8 +35,29 @@ document.querySelectorAll(".scroll-reveal").forEach((el) => {
 
 const contatoForm = document.getElementById("contato-form");
 const formStatus = document.getElementById("form-status");
+let statusTimeout;
+
+function mostrarStatus(mensagem, classes, tempo = 4000) {
+    clearTimeout(statusTimeout);
+
+    formStatus.textContent = mensagem;
+    formStatus.className = classes;
+
+    statusTimeout = setTimeout(() => {
+        formStatus.textContent = "";
+        formStatus.className = "hidden";
+    }, tempo);
+}
 
 if (contatoForm) {
+    contatoForm.querySelectorAll("input, textarea").forEach((campo) => {
+        campo.addEventListener("input", () => {
+            clearTimeout(statusTimeout);
+            formStatus.textContent = "";
+            formStatus.className = "hidden";
+        });
+    });
+
     contatoForm.addEventListener("submit", async function (e) {
         e.preventDefault();
 
@@ -47,25 +68,34 @@ if (contatoForm) {
         const quantidadePalavras = mensagem.split(/\s+/).filter(Boolean).length;
 
         if (nome.length < 2) {
-            formStatus.textContent = "Digite seu nome corretamente.";
-            formStatus.className = "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300";
+            mostrarStatus(
+                "Digite seu nome corretamente.",
+                "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300"
+            );
             return;
         }
 
         if (!email.includes("@")) {
-            formStatus.textContent = "Digite um e-mail válido.";
-            formStatus.className = "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300";
+            mostrarStatus(
+                "Digite um e-mail válido.",
+                "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300"
+            );
             return;
         }
 
         if (quantidadePalavras < 5) {
-            formStatus.textContent = "A mensagem deve ter no mínimo 5 palavras.";
-            formStatus.className = "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300";
+            mostrarStatus(
+                "A mensagem deve ter no mínimo 5 palavras.",
+                "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300"
+            );
             return;
         }
 
-        formStatus.textContent = "Enviando mensagem...";
-        formStatus.className = "mt-4 rounded-lg border border-violet-500/30 bg-violet-500/10 px-4 py-3 text-sm font-medium text-violet-300";
+        mostrarStatus(
+            "Enviando mensagem...",
+            "mt-4 rounded-lg border border-violet-500/30 bg-violet-500/10 px-4 py-3 text-sm font-medium text-violet-300",
+            10000
+        );
 
         const formData = new FormData(contatoForm);
 
@@ -81,17 +111,23 @@ if (contatoForm) {
             const data = await response.json();
 
             if (response.ok && data.success) {
-                formStatus.textContent = "Mensagem enviada com sucesso!";
-                formStatus.className = "mt-4 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm font-medium text-green-300";
+                mostrarStatus(
+                    "Mensagem enviada com sucesso!",
+                    "mt-4 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm font-medium text-green-300"
+                );
                 contatoForm.reset();
             } else {
-                formStatus.textContent = "Não foi possível enviar. Tente novamente.";
-                formStatus.className = "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300";
+                mostrarStatus(
+                    "Não foi possível enviar. Tente novamente.",
+                    "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300"
+                );
             }
 
         } catch (error) {
-            formStatus.textContent = "Erro ao enviar. Verifique sua conexão.";
-            formStatus.className = "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300";
+            mostrarStatus(
+                "Erro ao enviar. Verifique sua conexão.",
+                "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300"
+            );
         }
     });
 }
