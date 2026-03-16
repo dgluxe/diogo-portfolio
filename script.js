@@ -41,6 +41,7 @@ if (contatoForm) {
        e.preventDefault();
        
        formStatus.textContent = "Enviando mensagem...";
+       formStatus.className = "mt-3 text-sm font-medium text-violet-400";
 
        const formData = new FormData (contatoForm);
 
