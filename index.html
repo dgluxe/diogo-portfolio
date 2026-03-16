@@ -11,22 +11,36 @@
 
 <body class="bg-[hsl(220,20%,7%)] text-white">
     <header id="site-header" class="fixed top-0 left-0 right-0 z-50">
-        <div class="header-box mx-auto flex max-w-7xl items-center justify-between px-6 py-2">
-            <a href="#" class="text-xl font-bold font-serif px-20">
+        <div class="header-box mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-4">
+            <a href="#" class="font-serif text-xl font-bold">
                 <span class="text-violet-600">Diogo</span><span class="text-white">Brasil</span>
             </a>
 
-            <nav class="flex items-center gap-6 text-sm text-zinc-300">
-                <a href="#sobre" class="transition-colors hover:text-violet-400"> Sobre </a>
-                <a href="#habilidades" class="transition-colors hover:text-violet-400"> Habilidades </a>
-                <a href="#experiencia" class="transition-colors hover:text-violet-400"> Experiência </a>
-                <a href="#recomendacao" class="transition-colors hover:text-violet-400"> Carta de Recomendação</a>
-                <a href="#projetos" class="transition-colors hover:text-violet-400"> Projetos </a>
-                <a href="#contato" class="transition-colors hover:text-violet-400"> Contato </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
+                <a href="#sobre" class="transition-colors hover:text-violet-400">Sobre</a>
+                <a href="#habilidades" class="transition-colors hover:text-violet-400">Habilidades</a>
+                <a href="#experiencia" class="transition-colors hover:text-violet-400">Experiência</a>
+                <a href="#recomendacao" class="transition-colors hover:text-violet-400">Carta de Recomendação</a>
+                <a href="#projetos" class="transition-colors hover:text-violet-400">Projetos</a>
+                <a href="#contato" class="transition-colors hover:text-violet-400">Contato</a>
             </nav>
+
+            <button id="menu-btn" class="md:hidden text-white text-2xl">
+                ☰
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 px-6 pb-4 bg-[rgba(15,17,23,0.9)] backdrop-blur-md">
+            <a href="#sobre" class="block py-3 text-zinc-300 hover:text-violet-400">Sobre</a>
+            <a href="#habilidades" class="block py-3 text-zinc-300 hover:text-violet-400">Habilidades</a>
+            <a href="#experiencia" class="block py-3 text-zinc-300 hover:text-violet-400">Experiência</a>
+            <a href="#recomendacao" class="block py-3 text-zinc-300 hover:text-violet-400">Carta de Recomendação</a>
+            <a href="#projetos" class="block py-3 text-zinc-300 hover:text-violet-400">Projetos</a>
+            <a href="#contato" class="block py-3 text-zinc-300 hover:text-violet-400">Contato</a>
         </div>
     </header>
-    
+
+
     <section id="sobre" class="min-h-screen flex items-center justify-center relative px-4 pt-20">
 
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -47,11 +61,11 @@
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
-                <a href="#" class="px-8 py-3 bg-violet-700 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
+                <a href="#projetos" class="px-8 py-3 bg-violet-700 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
                     Ver Projetos
                 </a>
 
-                <a href="#" class="px-8 py-3 border border-violet-700 text-violet-400 font-semibold rounded-lg hover:bg-violet-700/10 transition-colors flex items-center justify-center gap-2">
+                <a href="#contato" class="px-8 py-3 border border-violet-700 text-violet-400 font-semibold rounded-lg hover:bg-violet-700/10 transition-colors flex items-center justify-center gap-2">
                     <i data-lucide="mail" class="h-[18px] w-[18px]"></i>
                     Contato
                 </a>
@@ -63,128 +77,130 @@
         </div>
     </section>
 
-    <section id="habilidades" class="px-6 py-24">
+    <section id="habilidades" class="py-24 px-4">
         <div class="mx-auto max-w-6xl">
             <div class="text-center">
-                <h2 class="font-serif text-5xl font-semibold text-white">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
                     Habilidades <span class="text-violet-400"> Técnicas </span>
                 </h2>
 
-                <p class="mt-4 text-lg text-zinc-400">
+                <p class="text-base text-zinc-400 text-center mb-16 scroll-reveal">
                     Tecnologias e ferramentas que utilizo
                 </p>
             </div>
             
-            <div class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="code" class="h-6 w-6"></i>
+            <div class="mt-16 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 items-start">
+
+
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="code" class="h-6 w-6 text-violet-400"></i>
                     </div>
                      
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         C# / .NET
                     </h3>
-                    <p class="mt-3 text-zinc-400">
+                    <p class="text-xs text-zinc-400">
                         Console apps & POO
                     </p>
 
                 </div>
            
             
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="database" class="h-6 w-6"></i>
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="database" class="h-6 w-6 text-violet-400"></i>
                     </div>
                      
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         PostgreSQL / MySQL
                     </h3>
-                    <p class="mt-3 text-zinc-400">
+                     <p class="text-xs text-zinc-400">
                         SQL, JOINs, DBeaver
                     </p>
 
                 </div>
 
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="globe" class="h-6 w-6"></i>
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="globe" class="h-6 w-6 text-violet-400"></i>
                     </div>
                      
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         HTML / CSS / JS
                     </h3>
-                    <p class="mt-3 text-zinc-400">
-                        Front-end and Back-end básico
+                    <p class="text-xs text-zinc-400">
+                        Front-end básico
                     </p>
 
                 </div>
         
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="git-branch" class="h-6 w-6"></i>
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="git-branch" class="h-6 w-6 text-violet-400"></i>
                     </div>
                      
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         Git / GitHub
                     </h3>
-                    <p class="mt-3 text-zinc-400">
+                     <p class="text-xs text-zinc-400">
                         Controle de versão
                     </p>
 
                 </div>
 
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="bar-chart-3" class="h-6 w-6"></i>
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="bar-chart-3" class="h-6 w-6 text-violet-400"></i>
                     </div>
 
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         Power BI
                     </h3>
 
-                    <p class="mt-3 text-zinc-400">
+                     <p class="text-xs text-zinc-400">
                         Visualização de dados
                     </p>
                 </div>
 
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="terminal" class="h-6 w-6"></i>
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="terminal" class="h-6 w-6 text-violet-400"></i>
                     </div>
 
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         Linux
                     </h3>
 
-                    <p class="mt-3 text-zinc-400">
+                    <p class="text-xs text-zinc-400">
                         Usuário
                     </p>
                 </div>
 
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="monitor" class="h-6 w-6"></i>
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="monitor" class="h-6 w-6 text-violet-400"></i>
                     </div>
 
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         Visual Studio
                     </h3>
 
-                    <p class="mt-3 text-zinc-400">
+                    <p class="text-xs text-zinc-400">
                         IDE principal
                     </p>
                 </div>
 
-                <div class="group min-h-[180px] rounded-3xl border border-zinc-800 bg-zinc-900/40 px-4 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-violet-500/40 hover:bg-zinc-900/70">
-                    <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-800/80 text-2xl text-violet-400">
-                        <i data-lucide="wrench" class="h-6 w-6"></i>
+                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                        <i data-lucide="wrench" class="h-6 w-6 text-violet-400"></i>
                     </div>
 
-                    <h3 class="mt-6 text-2xl font-semibold text-white">
+                    <h3 class="mb-1 text-sm font-semibold text-white">
                         Insomnia / XAMPP
                     </h3>
 
-                    <p class="mt-3 text-zinc-400">
+                     <p class="text-xs text-zinc-400">
                         Ferramentas de apoio
                     </p>
                 </div>
@@ -192,140 +208,132 @@
         </div>
     </section>
 
-    <section id="experiencia"  class="px-6 py-24">
-        <div class="mx-auto max-w-6xl">
+
+
+    <section id="experiencia"  class="py-24 px-4 bg-zinc-900/50"> 
+        <div class="max-w-4xl mx-auto">
             <div class="text-center">
-                <h2 class="font-serif text-5xl font-semibold text-white">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
                     Experiência & <span class="text-violet-400"> Formação </span>
                 </h2>
 
-                <p class="mt-4 text-lg text-zinc-400">
+                <p class="text-zinc-400 text-center mb-16 scroll-reveal">
                     Minha trajetória profissional e acadêmica 
                 </p>
             </div>
 
-            <div class="relative mt-20 min-h-[1000px]">
-                <div class="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-zinc-800" ></div>
+            <div class="relative">
 
-                <div class="absolute left-1/2 top-12 h-4 w-4 -translate-x-1/2 rounded-full bg-violet-400"></div>
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 md:-translate-x-px"></div>
 
-                <div class="absolute left-1/2 top-[390px] h-4 w-4 -translate-x-1/2 rounded-full bg-violet-400"></div>
+                <div class="scroll-reveal relative flex flex-col md:flex-row gap-4 mb-12" style="transition-delay: 0ms;">
+                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
 
-                <div class="absolute left-1/2 top-[610px] h-4 w-4 -translate-x-1/2 rounded-full bg-violet-400"></div>
+                    <div class="ml-10 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                AGO/2025 – OUT/2025
+                        </span>
 
-                <div class="absolute left-1/2 top-[820px] h-4 w-4 -translate-x-1/2 rounded-full bg-violet-400"></div>
-
-                <div class="grid grid-cols-[1fr_60px_1fr] items-start gap-y-16">
-
-                    <div class="pr-8 pt-11">
-
-                        <p class="text-right text-sm font-semibold text-violet-400">
-                                AGO/2025 - OUT/2025
-                        </p>
-
-                        <h3 class="mt-6 flex items-center gap-2 text-xl font-semibold text-white">
-                                <span class="text-violet-400">▣</span>
+                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
+                            <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
                               Estagiário de TI
                         </h3>
 
 
-                        <p class="mt-2 text-right text-sm text-zinc-400">
+                        <p class="mb-2 text-sm text-zinc-400">
                                 CADDI Cloud, Servidor Dedicado e Datacenter
                         </p>
 
             
 
-                            <ul class="mt-4 space-y-0 text-right text-sm leading-3 text-zinc-400">
-                                <li></li>
-                                <li>• Registro e acompanhamento de chamados TiFlux, com priorização e organização de fluxo</li>
-                                <li>• Suporte a usuários e sistemas, com instalação/configuração de softwares e troubleshooting</li>
-                                <li>• Geração de relatórios de máquinas ativas e conferência de dados para consistência</li>
-                                <li>• Atendimento médio de 20+ chamados/dia com foco em agilidade</li>
-                            </ul>
+                        <ul class="space-y-1">
+                            <li class="text-sm leading-relaxed text-zinc-400">• Registro e acompanhamento de chamados (Tiflux), com priorização e organização de fluxo</li>
+                            <li class="text-sm leading-relaxed text-zinc-400">• Suporte a usuários e sistemas, com instalação/configuração de softwares e troubleshooting</li>
+                            <li class="text-sm leading-relaxed text-zinc-400">• Geração de relatórios de máquinas ativas e conferência de dados para consistência</li>
+                            <li class="text-sm leading-relaxed text-zinc-400">• Atendimento médio de 20+ chamados/dia com foco em agilidade</li>
+                        </ul>
                     </div>
+                </div>
+                
+                <div class="scroll-reveal relative flex flex-col md:flex-row-reverse gap-4 mb-12" style="transition-delay: 0ms;">
+                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
 
-                    <div></div>
-                    <div></div>
+                    <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
+                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                JUL/2022 – AGO/2025
+                        </span>
 
-                    <div></div>
-                    <div></div>
-
-
-                    <div class="pl-8 pt-[7px]">
-                        <p class="text-sm font-semibold text-violet-400">
-                            JUL/2022 - AGO/2025
-                        </p>
-
-                        <h3 class="mt-6 flex items-center gap-2 text-xl font-semibold text-white">
-                            <span class="text-violet-400">▣</span>
-                            Auxiliar Administrativo
+                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
+                                <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
+                                Auxiliar Administrativo
                         </h3>
 
-                        <p class="mt-2 text-sm text-zinc-400">
-                            Transportes Bertolini
+                        <p class="mb-2 text-sm text-zinc-400">
+                                Transportes Bertolini
                         </p>
 
-                        <ul class="mt-4 space-y-0 text-sm leading-3 text-zinc-400">
-                                <li></li>
-                                <li>• Rotinas administrativas com foco em digitalização e automação de dados fiscais</li>
-                                <li>• Geração diária de relatórios de carga e acompanhamento operacional</li>
-                                <li>• Uso de planilhas para análise de informações e apoio em processos</li>
+                        <ul class="space-y-1">
+                                <li class="text-sm leading-relaxed text-zinc-400">• Rotinas administrativas com foco em digitalização e automação de dados fiscais</li>
+                                <li class="text-sm leading-relaxed text-zinc-400">• Geração diária de relatórios de carga e acompanhamento operacional</li>
+                                <li class="text-sm leading-relaxed text-zinc-400">• Uso de planilhas para análise de informações e apoio em processos</li>
                         </ul>
-
                     </div>
+
+                </div>
 
             
 
-                    <div class="pr-8 -mt-7">
+                <div class="scroll-reveal relative flex flex-col md:flex-row gap-4 mb-12" style="transition-delay: 0ms;">
+                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
 
-                        <p class="text-right text-sm font-semibold text-violet-400">
+                    <div class="ml-10 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
                                 2023 – 2028
-                        </p>
+                        </span>
 
-                        <h3 class="mt-6 flex items-center gap-2 text-xl font-semibold text-white">
-                                <span class="text-violet-400">▣</span>
+                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
+                            <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
                               Engenharia de Software
                         </h3>
 
 
-                        <p class="mt-2 text-right text-sm text-zinc-400">
-                                Centro Universitário ENIAC (Cursando)
+                        <p class="mb-2 text-sm text-zinc-400">
+                               Centro Universitário ENIAC (Cursando)
                         </p>
-        
-                        <ul class="mt-4 space-y-0 text-right text-sm leading-3 text-zinc-400">
-                            <li></li>
-                            <li>• Graduação em andamento com foco em desenvolvimento e banco de dados</li>
+
+            
+
+                        <ul class="space-y-1">
+                            <li class="text-sm leading-relaxed text-zinc-400">• Graduação em andamento com foco em desenvolvimento e banco de dados</li>
                         </ul>
-
-                    </div>
-
-                    <div></div>
-                    <div></div>
-
-                    <div></div>
-                    <div></div>
-
-                    <div class="pl-8 pt-[7px]">
-                        <p class="text-sm font-semibold text-violet-400">
-                            2020 - 2022
-                        </p>
-
-                        <h3 class="mt-6 flex items-center gap-2 text-xl font-semibold text-white">
-                            <span class="text-violet-400">▣</span>
-                            Técnico em Administração
-                        </h3>
-
-                        <p class="mt-2 text-sm text-zinc-400">
-                            ETEC (Concluído)
-                        </p>
-
-                        <ul class="mt-4 space-y-0 text-sm leading-3 text-zinc-400">
-                                <li></li>
-                                <li>• Formação técnica concluída</li>                        
-                        </ul>
-
                     </div>
                 </div>
+
+                <div class="scroll-reveal relative flex flex-col md:flex-row-reverse gap-4 mb-12" style="transition-delay: 0ms;">
+                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
+
+                    <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
+                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                               2020 – 2022
+                        </span>
+
+                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
+                                <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
+                                Técnico em Administração
+                        </h3>
+
+                        <p class="mb-2 text-sm text-zinc-400">
+                               ETEC (Concluído)
+                        </p>
+
+                        <ul class="space-y-1">
+                                <li class="text-sm leading-relaxed text-zinc-400">• Formação técnica concluída</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
             </div>
         </div>
     </section>
@@ -356,105 +364,124 @@
     </section>
 
 
-    <section id="projetos" class="px-6 py-24">
+    <section id="projetos" class="py-24 px-4">
         <div class="mx-auto max-w-6xl">
             <div class="text-center">
-                <h2 class="font-serif text-5xl font-semibold text-white">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
                     Meus <span class="text-violet-400"> Projetos </span>
                 </h2>
 
-                <p class="mt-4 text-lg text-zinc-400">
+                <p class="text-zinc-400 text-center mb-16 scroll-reveal">
                     Projetos pessoais e acadêmicos
                 </p>
 
             </div> 
 
-            <div class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div class="grid md:grid-cols-3 gap-6">
 
-                <div class="rounded-3xl border border-zinc-800 bg-zinc-900/40 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-violet-500">
+                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 0ms;">
 
-                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
-                        class="h-48 w-full object-cover transition-transform duration-300 hover:scale-105">
+                     <div class="img-zoom h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+                        class="w-full h-full object-cover" loading="lazy">
 
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                    </div>
                     <div class="p-6">
-
-                        <h3 class="text-xl font-semibold text-white">
+                        
+                        <h3 class="font-bold text-lg mb-2 text-white">
                             Programa de Chamados
                         </h3>
 
-                        <p class="mt-3 text-sm text-zinc-400">
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
                             CRUD de chamados (abrir, listar, fechar) em C# Console com persistência em PostgreSQL via Npgsql.
                         </p>
 
                         <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">C#</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">PostgreSQL</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">Npgsql</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">C#</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">PostgreSQL</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Npgsql</span>
                         </div>
 
-                        <a href="https://github.com/dgluxe/ti_chamados" class="mt-6 flex items-center gap-2 text-sm text-violet-400 hover:text-purple-100">
-                            <i data-lucide="github"></i>
+                        <a href="https://github.com/dgluxe/ti_chamados"  target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                            <i data-lucide="github"  class="h-4 w-4"></i>
                                 Ver no GitHub
+
+                            <i data-lucide="external-link" class="h-4 w-4"> </i>
+                            
                         </a>
 
                     </div>
 
                 </div>
 
-                <div class="rounded-3xl border border-zinc-800 bg-zinc-900/40 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-violet-500">
+                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 100ms;">
+                    
+                    <div class="img-zoom h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+                            class="w-full h-full object-cover" loading="lazy">
 
-                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
-                        class="h-48 w-full object-cover transition-transform duration-300 hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                        </div>
 
                     <div class="p-6">
 
-                        <h3 class="text-xl font-semibold text-white">
+                        <h3 class="font-bold text-lg mb-2 text-white">
                             Controle de Cargas SQL
                         </h3>
 
-                        <p class="mt-3 text-sm text-zinc-400">
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
                             Sistema de controle de cargas utilizando PostgreSQL e Docker com scripts SQL para gestão operacional.
                         </p>
 
                         <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">SQL</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">PostgreSQL</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">Docker</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">SQL</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">PostgreSQL</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Docker</span>
                         </div>
 
-                        <a href="https://github.com/dgluxe/cargas-sql-postgres" class="mt-6 flex items-center gap-2 text-sm text-violet-400 hover:text-purple-100">
-                            <i data-lucide="github"></i>
+                        <a href="https://github.com/dgluxe/cargas-sql-postgres" target="_blank"    class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                            <i data-lucide="github" class="h-4 w-4"></i>
                                 Ver no GitHub
+
+                            <i data-lucide="external-link" class="h-4 w-4"></i>
+    
                         </a>
 
                     </div>
 
                 </div>
 
-                <div class="rounded-3xl border border-zinc-800 bg-zinc-900/40 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-violet-500">
+                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 200ms;">
 
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop"
-                        class="h-48 w-full object-cover transition-transform duration-300 hover:scale-105">
+                    <div class="img-zoom h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop"
+                        class="w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+
+                    </div>
 
                     <div class="p-6">
 
-                        <h3 class="text-xl font-semibold text-white">
+                        <h3 class="font-bold text-lg mb-2 text-white">
                             Jogo Educativo 2D
                         </h3>
 
-                        <p class="mt-3 text-sm text-zinc-400">
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
                             Jogo educativo 2D sobre ODS 2 – Fome Zero, desenvolvido como projeto acadêmico.
                         </p>
 
                         <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">Game Dev</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">ODS 2</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">Construct 2</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Game Dev</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">ODS 2</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Construct 2</span>
                         </div>
 
-                        <a href="https://www.construct.net/en/free-online-games/herois-colheita-82507/play" class="mt-6 flex items-center gap-2 text-sm text-violet-400 hover:text-purple-100">
-                            <i data-lucide="gamepad"></i>
+                        <a href="https://www.construct.net/en/free-online-games/herois-colheita-82507/play" target="_blank"    class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                            <i data-lucide="gamepad" class="h-4 w-4"></i>
                                 Jogar
+                            
+                            <i data-lucide="external-link" class="h-4 w-4"></i>
                         </a>
 
                     </div>
@@ -462,18 +489,24 @@
                 </div>
 
 
-                <div class="rounded-3xl border border-zinc-800 bg-zinc-900/40 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-violet-500">
+                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 300ms;">
 
-                    <img src="https://images.unsplash.com/photo-1763872011479-aa293bf083a8?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        class="h-48 w-full object-cover transition-transform duration-300 hover:scale-105">
+
+                    <div class="img-zoom h-48 relative">
+                        <img src="https://images.unsplash.com/photo-1763872011479-aa293bf083a8?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                         class="w-full h-full object-cover" loading="lazy">
+
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                    </div>
 
                     <div class="p-6">
 
-                        <h3 class="text-xl font-semibold text-white">
+                        <h3 class="font-bold text-lg mb-2 text-white">
                            Planejamento de E-commerce (TCC)
                         </h3>
 
-                        <p class="mt-3 text-sm text-zinc-400">
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
                             Trabalho de Conclusão de Curso desenvolvido em grupo
                             no curso Técnico em Administração, analisando o
                             funcionamento do e-commerce, logística, segurança,
@@ -481,97 +514,100 @@
                         </p>
 
                         <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">E-commerce</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">Administração</span>
-                            <span class="rounded-full bg-zinc-800 px-3 py-1 text-xs text-violet-400">Planejamento</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">E-commerce</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Administração</span>
+                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Planejamento</span>
                         </div>
 
-                        <a href="pdf/TCC-E-COMMERCE.pdf" target="_blank" class="mt-6 flex items-center gap-2 text-sm text-violet-400 hover:text-purple-100">
-                            <i data-lucide="file-text"></i>
+                        <a href="pdf/TCC-E-COMMERCE.pdf" target="_blank"    class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                            <i data-lucide="file-text" class="h-4 w-4"></i>
                                 Ver TCC
+
+                            <i data-lucide="external-link" class="h-4 w-4"></i>
                         </a>
 
                     </div>
 
                 </div>
 
-            </div>
+            </div> 
         </div>
     </section>
 
 
 
-    <section id="contato" class="px-6 py-24">
-        <div class="mx-auto max-w-6xl">
+    <section id="contato" class="py-24 px-4 bg-zinc-900/50">
+        <div class="max-w-4xl mx-auto">
             <div class="text-center">
-                <h2 class="font-serif text-5xl font-semibold text-white">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
                     Entre em <span class="text-violet-400"> Contato </span>
                 </h2>
 
-                <p class="mt-4 text-lg text-zinc-400">
+                <p class="text-zinc-400 text-center mb-16 scroll-reveal">
                     Vamos conversar sobre oportunidades
                 </p>
             </div>
 
-            <div class="mt-16 grid gap-12 md:grid-cols-2">
-                <div>
-                    <h3 class="text-2xl font-semibold text-white">
-                        informações
+            <div class="grid gap-12 md:grid-cols-2">
+                <div class="scroll-reveal space-y-6">
+                    <h3 class="font-semibold text-lg mb-4 text-white">
+                        Informações
                     </h3>
 
-                    <div class="mt-8 space-y-5">
+                    <div class="space-y-4">
                         <a href="mailto:diiogobrasill@gmail.com" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="mail" class="h-5 w-5 text-violet-400"></i>
+                            <i data-lucide="mail" class="h-4 w-4 text-violet-400"></i>
                             <span>diiogobrasill@gmail.com</span>
                         </a>
 
                         <a href="https://wa.me/5511958161124" target="_blank" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="phone" class="h-5 w-5 text-violet-400"></i>
+                            <i data-lucide="phone" class="h-4 w-4 text-violet-400"></i>
                             <span>(11 95816-1124)</span>
                         </a>
                         <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="linkedin" class="h-5 w-5 text-violet-400"></i>
+                            <i data-lucide="linkedin" class="h-4 w-4 text-violet-400"></i>
                             <span>LinkedIn</span>
                         </a>
                         <a href="https://github.com/dgluxe" target="_blank" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="github" class="h-5 w-5 text-violet-400"></i>
+                            <i data-lucide="github" class="h-4 w-4 text-violet-400"></i>
                             <span>GitHub</span>
                         </a>
                     </div>
 
 
-                    <p class="mt-8 text-zinc-500">
+                    <p class="text-sm text-zinc-400 mt-6">
                         Guarulhos - SP, Brasil
                     </p>
                 </div>
 
 
-                <form class="space-y-4">
+                <form class="scroll-reveal space-y-4">
                     <input
                      type="text"
                      required
                      placeholder="Seu nome"
-                     class="w-full rounded-2xl border border-zinc-800 bg-zinc-900/60 px-5 py-4 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
+                     class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
                      >
 
                     <input
                      type="email"
                      placeholder="Seu e-mail"
                      required
-                     class="w-full rounded-2xl border border-zinc-800 bg-zinc-900/60 px-5 py-4 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
+                     class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
                      >
 
                     <textarea
                      placeholder="Sua mensagem"
                      required
-                     rows="6"
-                     class="w-full rounded-2xl border border-zinc-800 bg-zinc-900/60 px-5 py-4 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
+                     rows="5"
+                     class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400 resize-none"
                     ></textarea>
 
                     <button
                         type="submit"
-                        class="w-full rounded-2xl bg-violet-900 px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-purple-800"
+                        class="w-full rounded-lg bg-violet-700 px-6 py-3 text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                     >
+                    <i data-lucide="send" class="h-4 w-4"></i>
                         Enviar Mensagem
                     </button>
 
@@ -583,11 +619,11 @@
     </section>
 
 
-    <footer class="border-t border-zinc-800 px-6 py-10">
+    <footer class="py-8 px-4 border-t border-zinc-800 text-center">
         <div class="mx-auto max-w-6xl flex flex-col items-center gap-4 text-zinc-400">
 
-            <p>
-                © 2026 Diogo Brasil. Todos os direitos reservados.
+            <p class="text-sm text-zinc-400">
+                © 2026 <span class="text-violet-400">Diogo Brasil</span>. Todos os direitos reservados.
             </p>
 
             <div class="flex items-center gap-6">
