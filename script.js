@@ -65,7 +65,7 @@ if (contatoForm) {
         const email = contatoForm.querySelector('input[name="email"]').value.trim();
         const mensagem = contatoForm.querySelector('textarea[name="message"]').value.trim();
 
-        const quantidadePalavras = mensagem.split(/\s+/).filter(Boolean).length;
+        const mensagemSemEspacos = mensagem.replace(/\s/g, "");
 
         if (nome.length < 2) {
             mostrarStatus(
@@ -83,9 +83,9 @@ if (contatoForm) {
             return;
         }
 
-        if (quantidadePalavras < 5) {
+        if (mensagemSemEspacos.length < 5) {
             mostrarStatus(
-                "A mensagem deve ter no mínimo 5 palavras.",
+                "A mensagem deve ter no mínimo 5 caracteres.",
                 "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300"
             );
             return;
