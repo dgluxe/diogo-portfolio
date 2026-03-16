@@ -55,7 +55,7 @@ if (contatoForm) {
 
         const data = await response.json();
 
-        if (response.ok && data.sucess){
+        if (response.ok && data.success){
             formStatus.textContent = "Mensagem enviada com sucesso!";
             contatoForm.reset();
         } else {
