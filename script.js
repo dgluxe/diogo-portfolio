@@ -41,8 +41,7 @@ if (contatoForm) {
        e.preventDefault();
        
        formStatus.textContent = "Enviando mensagem...";
-       formStatus.className = "mt-3 text-sm font-medium text-violet-400";
-
+       formStatus.className = "mt-4 rounded-lg border border-violet-500/30 bg-violet-500/10 px-4 py-3 text-sm font-medium text-violet-300";
        const formData = new FormData (contatoForm);
 
        try {
@@ -58,14 +57,14 @@ if (contatoForm) {
 
         if (response.ok && data.success){
             formStatus.textContent = "Mensagem enviada com sucesso!";
-            contatoForm.reset();
+            formStatus.className = "mt-4 rounded-lg border border-green-500/30 bg-green-500/10 px-4 py-3 text-sm font-medium text-green-300";            contatoForm.reset();
         } else {
             formStatus.textContent = "Não foi possível enviar. Tente novamente.";
-
+            formStatus.className = "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300";
         }
 
     } catch (error) {
             formStatus.textContent = "Erro ao enviar. Verifique sua conexão";
-        }
+            formStatus.className = "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300";        }
     });
 }
