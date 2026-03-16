@@ -47,12 +47,15 @@ if (contatoForm) {
        try {
         const response = await fetch ("https://api.web3forms.com/submit", {
             method: "POST",
+            headers: {
+                Accept: "application/json"
+            },
             body: formData
         });
 
         const data = await response.json();
 
-        if (data.sucess){
+        if (response.ok && data.sucess){
             formStatus.textContent = "Mensagem enviada com sucesso!";
             contatoForm.reset();
         } else {
