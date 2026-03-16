@@ -581,10 +581,14 @@
                 </div>
 
 
-                <form class="scroll-reveal space-y-4">
-                    <input
+                <form action="https://api.web3forms.com/submit" method="POST"  class="scroll-reveal space-y-4">
+
+                    <input type="hidden" name="access_key" value="cc7dc1fa-279d-4c25-9151-fa29dc000aa1">
+
+                    <input 
                      type="text"
                      required
+                     name="name"
                      placeholder="Seu nome"
                      class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
                      >
@@ -593,6 +597,7 @@
                      type="email"
                      placeholder="Seu e-mail"
                      required
+                     name="email"
                      class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
                      >
 
@@ -600,6 +605,7 @@
                      placeholder="Sua mensagem"
                      required
                      rows="5"
+                     name="message"
                      class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400 resize-none"
                     ></textarea>
 
