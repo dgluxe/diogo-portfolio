@@ -32,3 +32,36 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".scroll-reveal").forEach((el) => {
     observer.observe(el);
 });
+
+const contatoForm = document.getElementById("contato-form");
+const formStatus = document.getElementById("form-status");
+
+if (contatoForm) {
+    contatoForm.addEventListener("submit", async function (e) {
+       e.preventDefault();
+       
+       formStatus.textContent = "Enviando mensagem...";
+
+       const formData = new FormData (contatoForm);
+
+       try {
+        const response = await fetch ("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.sucess){
+            formStatus.textContent = "Mensagem enviada com sucesso!";
+            contatoForm.reset();
+        } else {
+            formStatus.textContent = "Não foi possível enviar. Tente novamente.";
+
+        }
+
+    } catch (error) {
+            formStatus.textContent = "Erro ao enviar. Verifique sua conexão";
+        }
+    });
+}
