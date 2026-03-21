@@ -1,663 +1,664 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <title>Meu Portfólio</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
 
-<body class="bg-[hsl(220,20%,7%)] text-white">
-    <header id="site-header" class="fixed top-0 left-0 right-0 z-50">
-        <div class="header-box mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-4">
-            <a href="#" class="font-serif text-xl font-bold">
-                <span class="text-violet-600">Diogo</span><span class="text-white">Brasil</span>
-            </a>
-
-            <nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
-                <a href="#sobre" class="transition-colors hover:text-violet-400">Sobre</a>
-                <a href="#habilidades" class="transition-colors hover:text-violet-400">Habilidades</a>
-                <a href="#experiencia" class="transition-colors hover:text-violet-400">Experiência</a>
-                <a href="#recomendacao" class="transition-colors hover:text-violet-400">Carta de Recomendação</a>
-                <a href="#projetos" class="transition-colors hover:text-violet-400">Projetos</a>
-                <a href="#contato" class="transition-colors hover:text-violet-400">Contato</a>
-            </nav>
-
-            <button id="menu-btn" class="md:hidden text-white text-2xl">
-                ☰
-            </button>
-        </div>
-
-        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 px-6 pb-4 bg-[rgba(15,17,23,0.9)] backdrop-blur-md">
-            <a href="#sobre" class="block py-3 text-zinc-300 hover:text-violet-400">Sobre</a>
-            <a href="#habilidades" class="block py-3 text-zinc-300 hover:text-violet-400">Habilidades</a>
-            <a href="#experiencia" class="block py-3 text-zinc-300 hover:text-violet-400">Experiência</a>
-            <a href="#recomendacao" class="block py-3 text-zinc-300 hover:text-violet-400">Carta de Recomendação</a>
-            <a href="#projetos" class="block py-3 text-zinc-300 hover:text-violet-400">Projetos</a>
-            <a href="#contato" class="block py-3 text-zinc-300 hover:text-violet-400">Contato</a>
-        </div>
-    </header>
-
-
-    <section id="sobre" class="min-h-screen flex items-center justify-center relative px-4 pt-20">
-
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-violet-700/10 blur-[120px]"></div>
-        </div>
-        <div class="max-w-3xl mx-auto text-center relative z-10">
-            <p class="text-violet-400 text-sm tracking-[0.3em] uppercase mb-4 font-medium scroll-reveal">
-                Desenvolvedor & Analista de Dados
-            </p>
-            
-            <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight scroll-reveal text-white">
-                 Diogo de Alcantara<br>
-                 <span class="text-violet-600">Brasil</span>
-            </h1>
-
-            <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed scroll-reveal">
-                Estudante de Engenharia de Software com foco em desenvolvimento C#/.NET e banco de dados. Experiência em ambiente corporativo com resolução de problemas, organização e entregas ágeis. 
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
-                <a href="#projetos" class="px-8 py-3 bg-violet-700 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
-                    Ver Projetos
+    <body class="bg-[hsl(220,20%,7%)] text-white">
+        <header id="site-header" class="fixed top-0 left-0 right-0 z-50">
+            <div class="header-box mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-4">
+                <a href="#" class="font-serif text-xl font-bold">
+                    <span class="text-violet-600">Diogo</span><span class="text-white">Brasil</span>
                 </a>
 
-                <a href="#contato" class="px-8 py-3 border border-violet-700 text-violet-400 font-semibold rounded-lg hover:bg-violet-700/10 transition-colors flex items-center justify-center gap-2">
-                    <i data-lucide="mail" class="h-[18px] w-[18px]"></i>
-                    Contato
-                </a>
+                <nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
+                    <a href="#sobre" class="transition-colors hover:text-violet-400">Sobre</a>
+                    <a href="#habilidades" class="transition-colors hover:text-violet-400">Habilidades</a>
+                    <a href="#experiencia" class="transition-colors hover:text-violet-400">Experiência</a>
+                    <a href="#recomendacao" class="transition-colors hover:text-violet-400">Carta de Recomendação</a>
+                    <a href="#projetos" class="transition-colors hover:text-violet-400">Projetos</a>
+                    <a href="#contato" class="transition-colors hover:text-violet-400">Contato</a>
+                </nav>
+
+                <button id="menu-btn" class="md:hidden text-white text-2xl">
+                    ☰
+                </button>
             </div>
 
-            <button onclick="document.querySelector('#habilidades')?.scrollIntoView({ behavior: 'smooth' })" class="mt-16 animate-bounce text-violet-400/60 scroll-reveal">
-                <i data-lucide="arrow-down" class="h-6 w-6"></i>
-            </button>
-        </div>
-    </section>
-
-    <section id="habilidades" class="py-24 px-4">
-        <div class="mx-auto max-w-6xl">
-            <div class="text-center">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                    Habilidades <span class="text-violet-400"> Técnicas </span>
-                </h2>
-
-                <p class="text-base text-zinc-400 text-center mb-16 scroll-reveal">
-                    Tecnologias e ferramentas que utilizo
-                </p>
+            <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 px-6 pb-4 bg-[rgba(15,17,23,0.9)] backdrop-blur-md">
+                <a href="#sobre" class="block py-3 text-zinc-300 hover:text-violet-400">Sobre</a>
+                <a href="#habilidades" class="block py-3 text-zinc-300 hover:text-violet-400">Habilidades</a>
+                <a href="#experiencia" class="block py-3 text-zinc-300 hover:text-violet-400">Experiência</a>
+                <a href="#recomendacao" class="block py-3 text-zinc-300 hover:text-violet-400">Carta de Recomendação</a>
+                <a href="#projetos" class="block py-3 text-zinc-300 hover:text-violet-400">Projetos</a>
+                <a href="#contato" class="block py-3 text-zinc-300 hover:text-violet-400">Contato</a>
             </div>
-            
-            <div class="mt-16 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 items-start">
+        </header>
 
+        <main>
+            <section id="sobre" class="min-h-screen flex items-center justify-center relative px-4 pt-20">
 
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="code" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-                     
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        C# / .NET
-                    </h3>
-                    <p class="text-xs text-zinc-400">
-                        Console apps & POO
+                <div class="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-violet-700/10 blur-[120px]"></div>
+                </div>
+                <div class="max-w-3xl mx-auto text-center relative z-10">
+                    <p class="text-violet-400 text-sm tracking-[0.3em] uppercase mb-4 font-medium scroll-reveal">
+                        Desenvolvedor & Analista de Dados
                     </p>
-
-                </div>
-           
-            
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="database" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-                     
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        PostgreSQL / MySQL
-                    </h3>
-                     <p class="text-xs text-zinc-400">
-                        SQL, JOINs, DBeaver
-                    </p>
-
-                </div>
-
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="globe" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-                     
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        HTML / CSS / JS
-                    </h3>
-                    <p class="text-xs text-zinc-400">
-                        Front-end básico
-                    </p>
-
-                </div>
-        
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="git-branch" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-                     
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        Git / GitHub
-                    </h3>
-                     <p class="text-xs text-zinc-400">
-                        Controle de versão
-                    </p>
-
-                </div>
-
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="bar-chart-3" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        Power BI
-                    </h3>
-
-                     <p class="text-xs text-zinc-400">
-                        Visualização de dados
-                    </p>
-                </div>
-
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="terminal" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        Linux
-                    </h3>
-
-                    <p class="text-xs text-zinc-400">
-                        Usuário
-                    </p>
-                </div>
-
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="monitor" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        Visual Studio
-                    </h3>
-
-                    <p class="text-xs text-zinc-400">
-                        IDE principal
-                    </p>
-                </div>
-
-                <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
-                    <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
-                        <i data-lucide="wrench" class="h-6 w-6 text-violet-400"></i>
-                    </div>
-
-                    <h3 class="mb-1 text-sm font-semibold text-white">
-                        Insomnia / XAMPP
-                    </h3>
-
-                     <p class="text-xs text-zinc-400">
-                        Ferramentas de apoio
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section id="experiencia"  class="py-24 px-4 bg-zinc-900/50"> 
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                    Experiência & <span class="text-violet-400"> Formação </span>
-                </h2>
-
-                <p class="text-zinc-400 text-center mb-16 scroll-reveal">
-                    Minha trajetória profissional e acadêmica 
-                </p>
-            </div>
-
-            <div class="relative">
-
-                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 md:-translate-x-px"></div>
-
-                <div class="scroll-reveal relative flex flex-col md:flex-row gap-4 mb-12" style="transition-delay: 0ms;">
-                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
-
-                    <div class="ml-10 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
-                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
-                                AGO/2025 – OUT/2025
-                        </span>
-
-                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
-                            <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                              Estagiário de TI
-                        </h3>
-
-
-                        <p class="mb-2 text-sm text-zinc-400">
-                                CADDI Cloud, Servidor Dedicado e Datacenter
-                        </p>
-
-            
-
-                        <ul class="space-y-1">
-                            <li class="text-sm leading-relaxed text-zinc-400">• Registro e acompanhamento de chamados (Tiflux), com priorização e organização de fluxo</li>
-                            <li class="text-sm leading-relaxed text-zinc-400">• Suporte a usuários e sistemas, com instalação/configuração de softwares e troubleshooting</li>
-                            <li class="text-sm leading-relaxed text-zinc-400">• Geração de relatórios de máquinas ativas e conferência de dados para consistência</li>
-                            <li class="text-sm leading-relaxed text-zinc-400">• Atendimento médio de 20+ chamados/dia com foco em agilidade</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="scroll-reveal relative flex flex-col md:flex-row-reverse gap-4 mb-12" style="transition-delay: 0ms;">
-                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
-
-                    <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
-                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
-                                JUL/2022 – AGO/2025
-                        </span>
-
-                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
-                                <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                                Auxiliar Administrativo
-                        </h3>
-
-                        <p class="mb-2 text-sm text-zinc-400">
-                                Transportes Bertolini
-                        </p>
-
-                        <ul class="space-y-1">
-                                <li class="text-sm leading-relaxed text-zinc-400">• Rotinas administrativas com foco em digitalização e automação de dados fiscais</li>
-                                <li class="text-sm leading-relaxed text-zinc-400">• Geração diária de relatórios de carga e acompanhamento operacional</li>
-                                <li class="text-sm leading-relaxed text-zinc-400">• Uso de planilhas para análise de informações e apoio em processos</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            
-
-                <div class="scroll-reveal relative flex flex-col md:flex-row gap-4 mb-12" style="transition-delay: 0ms;">
-                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
-
-                    <div class="ml-10 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
-                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
-                                2023 – 2028
-                        </span>
-
-                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
-                            <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                              Engenharia de Software
-                        </h3>
-
-
-                        <p class="mb-2 text-sm text-zinc-400">
-                               Centro Universitário ENIAC (Cursando)
-                        </p>
-
-            
-
-                        <ul class="space-y-1">
-                            <li class="text-sm leading-relaxed text-zinc-400">• Graduação em andamento com foco em desenvolvimento e banco de dados</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="scroll-reveal relative flex flex-col md:flex-row-reverse gap-4 mb-12" style="transition-delay: 0ms;">
-                    <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
-
-                    <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
-                        <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
-                               2020 – 2022
-                        </span>
-
-                        <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
-                                <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                                Técnico em Administração
-                        </h3>
-
-                        <p class="mb-2 text-sm text-zinc-400">
-                               ETEC (Concluído)
-                        </p>
-
-                        <ul class="space-y-1">
-                                <li class="text-sm leading-relaxed text-zinc-400">• Formação técnica concluída</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-
-    <section id="recomendacao" class="px-6 py-24">
-        <div class="mx-auto max-w-6xl">
-
-            <div class="text-center">
-                <h2 class="font-serif text-5xl font-semibold text-white"> 
-                    Carta de <span class="text-violet-400"> Recomendação</span>
-                </h2>
-
-                <p class="mt-4 text-zinc-400 text-sm">
-                    Carta emitida pela empresa CADDI Soluções em Tecnologia após minha atuação como estagiário na área de TI.
-                </p>
-
-                <a href="pdf/CARTA RECOMENDACAO.pdf"
-                    target="_blank" rel="noopener noreferrer"
-                    class="mt-6 inline-flex items-center gap-2 rounded-xl bg-violet-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-violet-600">
-                    <i data-lucide="file-text"></i>
-                    Ver Carta de Recomendação
-                </a>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="projetos" class="py-24 px-4">
-        <div class="mx-auto max-w-6xl">
-            <div class="text-center">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                    Meus <span class="text-violet-400"> Projetos </span>
-                </h2>
-
-                <p class="text-zinc-400 text-center mb-16 scroll-reveal">
-                    Projetos pessoais e acadêmicos
-                </p>
-
-            </div> 
-
-            <div class="grid md:grid-cols-3 gap-6">
-
-                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 0ms;">
-
-                     <div class="img-zoom h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Imagem representativa do projeto Programa de Chamados"
-                        class="w-full h-full object-cover" loading="lazy">
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-                    </div>
-                    <div class="p-6">
-                        
-                        <h3 class="font-bold text-lg mb-2 text-white">
-                            Programa de Chamados
-                        </h3>
-
-                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
-                            CRUD de chamados (abrir, listar, fechar) em C# Console com persistência em PostgreSQL via Npgsql.
-                        </p>
-
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">C#</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">PostgreSQL</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Npgsql</span>
-                        </div>
-
-                        <a href="https://github.com/dgluxe/ti_chamados"  target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
-                            <i data-lucide="github"  class="h-4 w-4"></i>
-                                Ver no GitHub
-
-                            <i data-lucide="external-link" class="h-4 w-4"> </i>
-                            
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 100ms;">
                     
-                    <div class="img-zoom h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Imagem representativa do projeto Controle de Cargas SQL"
-                            class="w-full h-full object-cover" loading="lazy">
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight scroll-reveal text-white">
+                        Diogo de Alcantara<br>
+                        <span class="text-violet-600">Brasil</span>
+                    </h1>
 
-                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-                        </div>
-
-                    <div class="p-6">
-
-                        <h3 class="font-bold text-lg mb-2 text-white">
-                            Controle de Cargas SQL
-                        </h3>
-
-                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
-                            Sistema de controle de cargas utilizando PostgreSQL e Docker com scripts SQL para gestão operacional.
-                        </p>
-
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">SQL</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">PostgreSQL</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Docker</span>
-                        </div>
-
-                        <a href="https://github.com/dgluxe/cargas-sql-postgres" target="_blank" rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
-                            <i data-lucide="github" class="h-4 w-4"></i>
-                                Ver no GitHub
-
-                            <i data-lucide="external-link" class="h-4 w-4"></i>
-    
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 200ms;">
-
-                    <div class="img-zoom h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop" alt="Imagem representativa do projeto Jogo Educativo 2D"
-                        class="w-full h-full object-cover" loading="lazy">
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-
-                    </div>
-
-                    <div class="p-6">
-
-                        <h3 class="font-bold text-lg mb-2 text-white">
-                            Jogo Educativo 2D
-                        </h3>
-
-                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
-                            Jogo educativo 2D sobre ODS 2 – Fome Zero, desenvolvido como projeto acadêmico.
-                        </p>
-
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Game Dev</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">ODS 2</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Construct 2</span>
-                        </div>
-
-                        <a href="https://www.construct.net/en/free-online-games/herois-colheita-82507/play" target="_blank"  rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
-                            <i data-lucide="gamepad" class="h-4 w-4"></i>
-                                Jogar
-                            
-                            <i data-lucide="external-link" class="h-4 w-4"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 300ms;">
-
-
-                    <div class="img-zoom h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1763872011479-aa293bf083a8?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagem representativa do TCC Planejamento de E-commerce"
-                         class="w-full h-full object-cover" loading="lazy">
-
-
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
-                    </div>
-
-                    <div class="p-6">
-
-                        <h3 class="font-bold text-lg mb-2 text-white">
-                           Planejamento de E-commerce (TCC)
-                        </h3>
-
-                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
-                            Trabalho de Conclusão de Curso desenvolvido em grupo
-                            no curso Técnico em Administração, analisando o
-                            funcionamento do e-commerce, logística, segurança,
-                            formas de pagamento e tendências do mercado digital.
-                        </p>
-
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">E-commerce</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Administração</span>
-                            <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Planejamento</span>
-                        </div>
-
-                        <a href="pdf/TCC-E-COMMERCE.pdf" target="_blank"  rel="noopener noreferrer"  class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
-                            <i data-lucide="file-text" class="h-4 w-4"></i>
-                                Ver TCC
-
-                            <i data-lucide="external-link" class="h-4 w-4"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div> 
-        </div>
-    </section>
-
-
-
-    <section id="contato" class="py-24 px-4 bg-zinc-900/50">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center">
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                    Entre em <span class="text-violet-400"> Contato </span>
-                </h2>
-
-                <p class="text-zinc-400 text-center mb-16 scroll-reveal">
-                    Vamos conversar sobre oportunidades
-                </p>
-            </div>
-
-            <div class="grid gap-12 md:grid-cols-2">
-                <div class="scroll-reveal space-y-6">
-                    <h3 class="font-semibold text-lg mb-4 text-white">
-                        Informações
-                    </h3>
-
-                    <div class="space-y-4">
-                        <a href="mailto:diiogobrasill@gmail.com" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="mail" class="h-4 w-4 text-violet-400"></i>
-                            <span>diiogobrasill@gmail.com</span>
-                        </a>
-
-                        <a href="https://wa.me/5511958161124" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="phone" class="h-4 w-4 text-violet-400"></i>
-                            <span>(11 95816-1124)</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="linkedin" class="h-4 w-4 text-violet-400"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/dgluxe" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
-                            <i data-lucide="github" class="h-4 w-4 text-violet-400"></i>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-
-
-                    <p class="text-sm text-zinc-400 mt-6">
-                        Guarulhos - SP, Brasil
+                    <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed scroll-reveal">
+                        Estudante de Engenharia de Software com foco em desenvolvimento C#/.NET e banco de dados. Experiência em ambiente corporativo com resolução de problemas, organização e entregas ágeis. 
                     </p>
-                </div>
 
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
+                        <a href="#projetos" class="px-8 py-3 bg-violet-700 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
+                            Ver Projetos
+                        </a>
 
-                <form id="contato-form" action="https://api.web3forms.com/submit" method="POST" novalidate  class="scroll-reveal space-y-4">
+                        <a href="#contato" class="px-8 py-3 border border-violet-700 text-violet-400 font-semibold rounded-lg hover:bg-violet-700/10 transition-colors flex items-center justify-center gap-2">
+                            <i data-lucide="mail" class="h-[18px] w-[18px]"></i>
+                            Contato
+                        </a>
+                    </div>
 
-                    <input type="hidden" name="access_key" value="cc7dc1fa-279d-4c25-9151-fa29dc000aa1">
-                    <input type="hidden" name="subject" value="Novo contato do portfólio - Diogo Brasil">
-                    <input type="hidden" name="from_name" value="Portfólio Diogo Brasil">
-
-                    <input 
-                     type="text"
-                     required
-                     name="name"
-                     placeholder="Seu nome"
-                     class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
-                     >
-
-                    <input
-                     type="email"
-                     placeholder="Seu e-mail"
-                     required
-                     name="email"
-                     class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
-                     >
-
-                    <textarea
-                     placeholder="Sua mensagem"
-                     required
-                     rows="5"
-                     name="message"
-                     class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400 resize-none"
-                    ></textarea>
-
-                    <button
-                        type="submit"
-                        class="w-full rounded-lg bg-violet-700 px-6 py-3 text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
-                    >
-                    <i data-lucide="send" class="h-4 w-4"></i>
-                        Enviar Mensagem
+                    <button onclick="document.querySelector('#habilidades')?.scrollIntoView({ behavior: 'smooth' })" class="mt-16 animate-bounce text-violet-400/60 scroll-reveal">
+                        <i data-lucide="arrow-down" class="h-6 w-6"></i>
                     </button>
+                </div>
+            </section>
 
-                    <div id="form-status" class="mt-4 hidden rounded-lg border px-4 py-3 text-sm font-medium"></div>
+            <section id="habilidades" class="py-24 px-4">
+                <div class="mx-auto max-w-6xl">
+                    <div class="text-center">
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
+                            Habilidades <span class="text-violet-400"> Técnicas </span>
+                        </h2>
 
-                </form>
+                        <p class="text-base text-zinc-400 text-center mb-16 scroll-reveal">
+                            Tecnologias e ferramentas que utilizo
+                        </p>
+                    </div>
+                    
+                    <div class="mt-16 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4 items-start">
 
 
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="code" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+                            
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                C# / .NET
+                            </h3>
+                            <p class="text-xs text-zinc-400">
+                                Console apps & POO
+                            </p>
+
+                        </div>
+                
+                    
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="database" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+                            
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                PostgreSQL / MySQL
+                            </h3>
+                            <p class="text-xs text-zinc-400">
+                                SQL, JOINs, DBeaver
+                            </p>
+
+                        </div>
+
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="globe" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+                            
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                HTML / CSS / JS
+                            </h3>
+                            <p class="text-xs text-zinc-400">
+                                Front-end básico
+                            </p>
+
+                        </div>
+                
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="git-branch" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+                            
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                Git / GitHub
+                            </h3>
+                            <p class="text-xs text-zinc-400">
+                                Controle de versão
+                            </p>
+
+                        </div>
+
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="bar-chart-3" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                Power BI
+                            </h3>
+
+                            <p class="text-xs text-zinc-400">
+                                Visualização de dados
+                            </p>
+                        </div>
+
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="terminal" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                Linux
+                            </h3>
+
+                            <p class="text-xs text-zinc-400">
+                                Usuário
+                            </p>
+                        </div>
+
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="monitor" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                Visual Studio
+                            </h3>
+
+                            <p class="text-xs text-zinc-400">
+                                IDE principal
+                            </p>
+                        </div>
+
+                        <div class="scroll-reveal card-hover group rounded-xl border border-zinc-800 bg-zinc-900/40 p-6 text-center">
+                            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-800 transition-colors group-hover:bg-violet-700/10  ">
+                                <i data-lucide="wrench" class="h-6 w-6 text-violet-400"></i>
+                            </div>
+
+                            <h3 class="mb-1 text-sm font-semibold text-white">
+                                Insomnia / XAMPP
+                            </h3>
+
+                            <p class="text-xs text-zinc-400">
+                                Ferramentas de apoio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="experiencia"  class="py-24 px-4 bg-zinc-900/50"> 
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
+                            Experiência & <span class="text-violet-400"> Formação </span>
+                        </h2>
+
+                        <p class="text-zinc-400 text-center mb-16 scroll-reveal">
+                            Minha trajetória profissional e acadêmica 
+                        </p>
+                    </div>
+
+                    <div class="relative">
+
+                        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 md:-translate-x-px"></div>
+
+                        <div class="scroll-reveal relative flex flex-col md:flex-row gap-4 mb-12" style="transition-delay: 0ms;">
+                            <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
+
+                            <div class="ml-10 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                                <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                        AGO/2025 – OUT/2025
+                                </span>
+
+                                <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
+                                    <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
+                                    Estagiário de TI
+                                </h3>
+
+
+                                <p class="mb-2 text-sm text-zinc-400">
+                                        CADDI Cloud, Servidor Dedicado e Datacenter
+                                </p>
+
+                    
+
+                                <ul class="space-y-1">
+                                    <li class="text-sm leading-relaxed text-zinc-400">• Registro e acompanhamento de chamados (Tiflux), com priorização e organização de fluxo</li>
+                                    <li class="text-sm leading-relaxed text-zinc-400">• Suporte a usuários e sistemas, com instalação/configuração de softwares e troubleshooting</li>
+                                    <li class="text-sm leading-relaxed text-zinc-400">• Geração de relatórios de máquinas ativas e conferência de dados para consistência</li>
+                                    <li class="text-sm leading-relaxed text-zinc-400">• Atendimento médio de 20+ chamados/dia com foco em agilidade</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="scroll-reveal relative flex flex-col md:flex-row-reverse gap-4 mb-12" style="transition-delay: 0ms;">
+                            <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
+
+                            <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
+                                <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                        JUL/2022 – AGO/2025
+                                </span>
+
+                                <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
+                                        <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
+                                        Auxiliar Administrativo
+                                </h3>
+
+                                <p class="mb-2 text-sm text-zinc-400">
+                                        Transportes Bertolini
+                                </p>
+
+                                <ul class="space-y-1">
+                                        <li class="text-sm leading-relaxed text-zinc-400">• Rotinas administrativas com foco em digitalização e automação de dados fiscais</li>
+                                        <li class="text-sm leading-relaxed text-zinc-400">• Geração diária de relatórios de carga e acompanhamento operacional</li>
+                                        <li class="text-sm leading-relaxed text-zinc-400">• Uso de planilhas para análise de informações e apoio em processos</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    
+
+                        <div class="scroll-reveal relative flex flex-col md:flex-row gap-4 mb-12" style="transition-delay: 0ms;">
+                            <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
+
+                            <div class="ml-10 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                                <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                        2023 – 2028
+                                </span>
+
+                                <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
+                                    <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
+                                    Engenharia de Software
+                                </h3>
+
+
+                                <p class="mb-2 text-sm text-zinc-400">
+                                    Centro Universitário ENIAC (Cursando)
+                                </p>
+
+                    
+
+                                <ul class="space-y-1">
+                                    <li class="text-sm leading-relaxed text-zinc-400">• Graduação em andamento com foco em desenvolvimento e banco de dados</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="scroll-reveal relative flex flex-col md:flex-row-reverse gap-4 mb-12" style="transition-delay: 0ms;">
+                            <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
+
+                            <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
+                                <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                    2020 – 2022
+                                </span>
+
+                                <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
+                                        <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
+                                        Técnico em Administração
+                                </h3>
+
+                                <p class="mb-2 text-sm text-zinc-400">
+                                    ETEC (Concluído)
+                                </p>
+
+                                <ul class="space-y-1">
+                                        <li class="text-sm leading-relaxed text-zinc-400">• Formação técnica concluída</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="recomendacao" class="px-6 py-24">
+                <div class="mx-auto max-w-6xl">
+
+                    <div class="text-center">
+                        <h2 class="font-serif text-5xl font-semibold text-white"> 
+                            Carta de <span class="text-violet-400"> Recomendação</span>
+                        </h2>
+
+                        <p class="mt-4 text-zinc-400 text-sm">
+                            Carta emitida pela empresa CADDI Soluções em Tecnologia após minha atuação como estagiário na área de TI.
+                        </p>
+
+                        <a href="pdf/CARTA RECOMENDACAO.pdf"
+                            target="_blank" rel="noopener noreferrer"
+                            class="mt-6 inline-flex items-center gap-2 rounded-xl bg-violet-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-violet-600">
+                            <i data-lucide="file-text"></i>
+                            Ver Carta de Recomendação
+                        </a>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="projetos" class="py-24 px-4">
+                <div class="mx-auto max-w-6xl">
+                    <div class="text-center">
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
+                            Meus <span class="text-violet-400"> Projetos </span>
+                        </h2>
+
+                        <p class="text-zinc-400 text-center mb-16 scroll-reveal">
+                            Projetos pessoais e acadêmicos
+                        </p>
+
+                    </div> 
+
+                    <div class="grid md:grid-cols-3 gap-6">
+
+                        <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 0ms;">
+
+                            <div class="img-zoom h-48 relative">
+                                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Imagem representativa do projeto Programa de Chamados"
+                                class="w-full h-full object-cover" loading="lazy">
+
+                                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                            </div>
+                            <div class="p-6">
+                                
+                                <h3 class="font-bold text-lg mb-2 text-white">
+                                    Programa de Chamados
+                                </h3>
+
+                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                    CRUD de chamados (abrir, listar, fechar) em C# Console com persistência em PostgreSQL via Npgsql.
+                                </p>
+
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">C#</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">PostgreSQL</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Npgsql</span>
+                                </div>
+
+                                <a href="https://github.com/dgluxe/ti_chamados"  target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                                    <i data-lucide="github"  class="h-4 w-4"></i>
+                                        Ver no GitHub
+
+                                    <i data-lucide="external-link" class="h-4 w-4"> </i>
+                                    
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 100ms;">
+                            
+                            <div class="img-zoom h-48 relative">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Imagem representativa do projeto Controle de Cargas SQL"
+                                    class="w-full h-full object-cover" loading="lazy">
+
+                                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                                </div>
+
+                            <div class="p-6">
+
+                                <h3 class="font-bold text-lg mb-2 text-white">
+                                    Controle de Cargas SQL
+                                </h3>
+
+                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                    Sistema de controle de cargas utilizando PostgreSQL e Docker com scripts SQL para gestão operacional.
+                                </p>
+
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">SQL</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">PostgreSQL</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Docker</span>
+                                </div>
+
+                                <a href="https://github.com/dgluxe/cargas-sql-postgres" target="_blank" rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                                    <i data-lucide="github" class="h-4 w-4"></i>
+                                        Ver no GitHub
+
+                                    <i data-lucide="external-link" class="h-4 w-4"></i>
+            
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 200ms;">
+
+                            <div class="img-zoom h-48 relative">
+                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop" alt="Imagem representativa do projeto Jogo Educativo 2D"
+                                class="w-full h-full object-cover" loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+
+                            </div>
+
+                            <div class="p-6">
+
+                                <h3 class="font-bold text-lg mb-2 text-white">
+                                    Jogo Educativo 2D
+                                </h3>
+
+                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                    Jogo educativo 2D sobre ODS 2 – Fome Zero, desenvolvido como projeto acadêmico.
+                                </p>
+
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Game Dev</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">ODS 2</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Construct 2</span>
+                                </div>
+
+                                <a href="https://www.construct.net/en/free-online-games/herois-colheita-82507/play" target="_blank"  rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                                    <i data-lucide="gamepad" class="h-4 w-4"></i>
+                                        Jogar
+                                    
+                                    <i data-lucide="external-link" class="h-4 w-4"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="scroll-reveal card-hover bg-zinc-900/40 border border-zinc-800 rounded-xl overflow-hidden group hover:border-violet-500" style="transition-delay: 300ms;">
+
+
+                            <div class="img-zoom h-48 relative">
+                                <img src="https://images.unsplash.com/photo-1763872011479-aa293bf083a8?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagem representativa do TCC Planejamento de E-commerce"
+                                class="w-full h-full object-cover" loading="lazy">
+
+
+                                <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent"></div>
+                            </div>
+
+                            <div class="p-6">
+
+                                <h3 class="font-bold text-lg mb-2 text-white">
+                                Planejamento de E-commerce (TCC)
+                                </h3>
+
+                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                    Trabalho de Conclusão de Curso desenvolvido em grupo
+                                    no curso Técnico em Administração, analisando o
+                                    funcionamento do e-commerce, logística, segurança,
+                                    formas de pagamento e tendências do mercado digital.
+                                </p>
+
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">E-commerce</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Administração</span>
+                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Planejamento</span>
+                                </div>
+
+                                <a href="pdf/TCC-E-COMMERCE.pdf" target="_blank"  rel="noopener noreferrer"  class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                                    <i data-lucide="file-text" class="h-4 w-4"></i>
+                                        Ver TCC
+
+                                    <i data-lucide="external-link" class="h-4 w-4"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div> 
+                </div>
+            </section>
+
+
+
+            <section id="contato" class="py-24 px-4 bg-zinc-900/50">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
+                            Entre em <span class="text-violet-400"> Contato </span>
+                        </h2>
+
+                        <p class="text-zinc-400 text-center mb-16 scroll-reveal">
+                            Vamos conversar sobre oportunidades
+                        </p>
+                    </div>
+
+                    <div class="grid gap-12 md:grid-cols-2">
+                        <div class="scroll-reveal space-y-6">
+                            <h3 class="font-semibold text-lg mb-4 text-white">
+                                Informações
+                            </h3>
+
+                            <div class="space-y-4">
+                                <a href="mailto:diiogobrasill@gmail.com" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
+                                    <i data-lucide="mail" class="h-4 w-4 text-violet-400"></i>
+                                    <span>diiogobrasill@gmail.com</span>
+                                </a>
+
+                                <a href="https://wa.me/5511958161124" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
+                                    <i data-lucide="phone" class="h-4 w-4 text-violet-400"></i>
+                                    <span>(11 95816-1124)</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
+                                    <i data-lucide="linkedin" class="h-4 w-4 text-violet-400"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/dgluxe" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
+                                    <i data-lucide="github" class="h-4 w-4 text-violet-400"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+
+
+                            <p class="text-sm text-zinc-400 mt-6">
+                                Guarulhos - SP, Brasil
+                            </p>
+                        </div>
+
+
+                        <form id="contato-form" action="https://api.web3forms.com/submit" method="POST" novalidate  class="scroll-reveal space-y-4">
+
+                            <input type="hidden" name="access_key" value="cc7dc1fa-279d-4c25-9151-fa29dc000aa1">
+                            <input type="hidden" name="subject" value="Novo contato do portfólio - Diogo Brasil">
+                            <input type="hidden" name="from_name" value="Portfólio Diogo Brasil">
+
+                            <input 
+                            type="text"
+                            required
+                            name="name"
+                            placeholder="Seu nome"
+                            class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
+                            >
+
+                            <input
+                            type="email"
+                            placeholder="Seu e-mail"
+                            required
+                            name="email"
+                            class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
+                            >
+
+                            <textarea
+                            placeholder="Sua mensagem"
+                            required
+                            rows="5"
+                            name="message"
+                            class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400 resize-none"
+                            ></textarea>
+
+                            <button
+                                type="submit"
+                                class="w-full rounded-lg bg-violet-700 px-6 py-3 text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                            >
+                            <i data-lucide="send" class="h-4 w-4"></i>
+                                Enviar Mensagem
+                            </button>
+
+                            <div id="form-status" class="mt-4 hidden rounded-lg border px-4 py-3 text-sm font-medium"></div>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="py-8 px-4 border-t border-zinc-800 text-center">
+            <div class="mx-auto max-w-6xl flex flex-col items-center gap-4 text-zinc-400">
+
+                <p class="text-sm text-zinc-400">
+                    © 2026 <span class="text-violet-400">Diogo Brasil</span>. Todos os direitos reservados.
+                </p>
+
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/dgluxe" target="_blank" rel="noopener noreferrer" class="hover:text-violet-400 transition-colors ">
+                        <i data-lucide="github"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" target="_blank" rel="noopener noreferrer" class="hover:text-violet-400 transition-colors">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+
+                    <a href="mailto:diiogobrasill@gmail.com" class="hover:text-violet-400 transition-colors">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+
+        </footer>
 
 
-    <footer class="py-8 px-4 border-t border-zinc-800 text-center">
-        <div class="mx-auto max-w-6xl flex flex-col items-center gap-4 text-zinc-400">
-
-            <p class="text-sm text-zinc-400">
-                © 2026 <span class="text-violet-400">Diogo Brasil</span>. Todos os direitos reservados.
-            </p>
-
-            <div class="flex items-center gap-6">
-                <a href="https://github.com/dgluxe" target="_blank" rel="noopener noreferrer" class="hover:text-violet-400 transition-colors ">
-                    <i data-lucide="github"></i>
-                </a>
-                  
-                <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" target="_blank" rel="noopener noreferrer" class="hover:text-violet-400 transition-colors">
-                    <i data-lucide="linkedin"></i>
-                </a>
-
-                <a href="mailto:diiogobrasill@gmail.com" class="hover:text-violet-400 transition-colors">
-                    <i data-lucide="mail"></i>
-                </a>
-            </div>
-        </div>
-
-    </footer>
-
-
-<script src="script.js"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script> 
-    lucide.createIcons();
-</script>
-</body>
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <script> 
+            lucide.createIcons();
+        </script>
+    </body>
 </html>
