@@ -6,9 +6,7 @@ html {
     transition: all 0.3s ease;
 }
 
-#site-header.scrolled {
-   background: transparent;
-}
+
 
 #site-header.scrolled .header-box {
     

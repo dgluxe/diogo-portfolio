@@ -16,11 +16,19 @@ menuBtn.addEventListener("click", () => {
     menuBtn.textContent = mobileMenu.classList.contains("hidden") ? "☰" : "✕";
 });
 
+document.querySelectorAll("#mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuBtn.textContent = "☰";
+    });
+});
+
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("revealed");
+                observer.unobserve(entry.target);
             }
         });
     },
