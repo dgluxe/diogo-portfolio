@@ -352,7 +352,7 @@
                 </p>
 
                 <a href="pdf/CARTA RECOMENDACAO.pdf"
-                    target="_blank"
+                    target="_blank" rel="noopener noreferrer"
                     class="mt-6 inline-flex items-center gap-2 rounded-xl bg-violet-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-violet-600">
                     <i data-lucide="file-text"></i>
                     Ver Carta de Recomendação
@@ -403,7 +403,7 @@
                             <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Npgsql</span>
                         </div>
 
-                        <a href="https://github.com/dgluxe/ti_chamados"  target="_blank" class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                        <a href="https://github.com/dgluxe/ti_chamados"  target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                             <i data-lucide="github"  class="h-4 w-4"></i>
                                 Ver no GitHub
 
@@ -440,7 +440,7 @@
                             <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Docker</span>
                         </div>
 
-                        <a href="https://github.com/dgluxe/cargas-sql-postgres" target="_blank"    class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                        <a href="https://github.com/dgluxe/cargas-sql-postgres" target="_blank" rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                             <i data-lucide="github" class="h-4 w-4"></i>
                                 Ver no GitHub
 
@@ -477,7 +477,7 @@
                             <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Construct 2</span>
                         </div>
 
-                        <a href="https://www.construct.net/en/free-online-games/herois-colheita-82507/play" target="_blank"    class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                        <a href="https://www.construct.net/en/free-online-games/herois-colheita-82507/play" target="_blank"  rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                             <i data-lucide="gamepad" class="h-4 w-4"></i>
                                 Jogar
                             
@@ -519,7 +519,7 @@
                             <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Planejamento</span>
                         </div>
 
-                        <a href="pdf/TCC-E-COMMERCE.pdf" target="_blank"    class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
+                        <a href="pdf/TCC-E-COMMERCE.pdf" target="_blank"  rel="noopener noreferrer"  class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                             <i data-lucide="file-text" class="h-4 w-4"></i>
                                 Ver TCC
 
@@ -560,15 +560,15 @@
                             <span>diiogobrasill@gmail.com</span>
                         </a>
 
-                        <a href="https://wa.me/5511958161124" target="_blank" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
+                        <a href="https://wa.me/5511958161124" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
                             <i data-lucide="phone" class="h-4 w-4 text-violet-400"></i>
                             <span>(11 95816-1124)</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
+                        <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
                             <i data-lucide="linkedin" class="h-4 w-4 text-violet-400"></i>
                             <span>LinkedIn</span>
                         </a>
-                        <a href="https://github.com/dgluxe" target="_blank" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
+                        <a href="https://github.com/dgluxe" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-zinc-400 transition-colors hover:text-violet-400">
                             <i data-lucide="github" class="h-4 w-4 text-violet-400"></i>
                             <span>GitHub</span>
                         </a>
@@ -581,9 +581,11 @@
                 </div>
 
 
-                <form id="contato-form" action="https://api.web3forms.com/submit" method="POST"  class="scroll-reveal space-y-4">
+                <form id="contato-form" action="https://api.web3forms.com/submit" method="POST" novalidate  class="scroll-reveal space-y-4">
 
                     <input type="hidden" name="access_key" value="cc7dc1fa-279d-4c25-9151-fa29dc000aa1">
+                    <input type="hidden" name="subject" value="Novo contato do portfólio - Diogo Brasil">
+                    <input type="hidden" name="from_name" value="Portfólio Diogo Brasil">
 
                     <input 
                      type="text"
@@ -617,7 +619,7 @@
                         Enviar Mensagem
                     </button>
 
-                    <p id="form-status" class="mt-4 hidden rounded-lg border px-4 py-3 text-sm font-medium"></p>
+                    <div id="form-status" class="mt-4 hidden rounded-lg border px-4 py-3 text-sm font-medium"></div>
 
                 </form>
 
@@ -635,11 +637,11 @@
             </p>
 
             <div class="flex items-center gap-6">
-                <a href="https://github.com/dgluxe" target="_blank" class="hover:text-violet-400 transition-colors ">
+                <a href="https://github.com/dgluxe" target="_blank" rel="noopener noreferrer" class="hover:text-violet-400 transition-colors ">
                     <i data-lucide="github"></i>
                 </a>
                   
-                <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" class="hover:text-violet-400 transition-colors">
+                <a href="https://www.linkedin.com/in/diogo-de-alcantara-brasil-8a7598186" target="_blank" rel="noopener noreferrer" class="hover:text-violet-400 transition-colors">
                     <i data-lucide="linkedin"></i>
                 </a>
 
