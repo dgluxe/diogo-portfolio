@@ -346,8 +346,8 @@ function setActiveLanguage(lang) {
             },
 
             exp: {
-                title2: "Experience &",
-                subtitle2: "Education",
+                title: "Experience &",
+                subtitle: "Education",
                 description: "My professional and academic journey",
 
                 item1: {
