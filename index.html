@@ -6,27 +6,46 @@
         <title>Diogo Brasil | Portfólio</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body class="bg-[hsl(220,20%,7%)] text-white">
         <header id="site-header" class="fixed top-0 left-0 right-0 z-50">
-            <div class="header-box mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6 py-4">
+            <div class="header-box mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-4">
                 <a href="#" class="font-serif text-xl font-bold">
                     <span class="text-violet-600">Diogo</span><span class="text-white">Brasil</span>
                 </a>
 
                 <nav class="hidden md:flex items-center gap-8 text-sm text-zinc-300">
-                    <a href="#sobre" class="transition-colors hover:text-violet-400">Sobre</a>
-                    <a href="#habilidades" class="transition-colors hover:text-violet-400">Habilidades</a>
-                    <a href="#experiencia" class="transition-colors hover:text-violet-400">Experiência</a>
-                    <a href="#recomendacao" class="transition-colors hover:text-violet-400">Carta de Recomendação</a>
-                    <a href="#projetos" class="transition-colors hover:text-violet-400">Projetos</a>
-                    <a href="#contato" class="transition-colors hover:text-violet-400">Contato</a>
+                    <a href="#sobre" data-i18n="nav.about" class="transition-colors hover:text-violet-400">Sobre</a>
+                    <a href="#habilidades" data-i18n="nav.skills" class="transition-colors hover:text-violet-400">Habilidades</a>
+                    <a href="#experiencia" data-i18n="nav.experience" class="transition-colors hover:text-violet-400">Experiência</a>
+                    <a href="#recomendacao" data-i18n="nav.recommendation" class="transition-colors hover:text-violet-400">Carta de Recomendação</a>
+                    <a href="#projetos" data-i18n="nav.projects" class="transition-colors hover:text-violet-400">Projetos</a>
+                    <a href="#contato"data-i18n="nav.contact" class="transition-colors hover:text-violet-400">Contato</a>
+
+                    <div class="ml-2 flex items-center rounded-full border border-zinc-800 bg-zinc-900/70 p-1 backdrop-blur-sm">
+                        <button id="lang-pt" data-lang="pt" type="button" class="lang-btn lang-btn-active flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors">
+                            <span>🇧🇷</span>
+                            <span>PT</span>
+                        </button>
+
+                        <span class="mx-1 h-5 w-px bg-zinc-700"></span>
+
+                        <button id="lang-en" data-lang="en" type="button" class="lang-btn lang-btn-inactive flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:text-white">
+                            <span>🇺🇸</span>
+                            <span>EN</span>
+                        </button>
+
+                        <span class="mx-1 h-5 w-px bg-zinc-700"></span>
+
+                        <button id="lang-es" data-lang="es" type="button" class="lang-btn lang-btn-disabled flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors">
+                            <span>🇪🇸</span>
+                            <span>ES</span>
+                        </button>
+                    </div>
                 </nav>
 
-                <button id="menu-btn" class="md:hidden text-white text-2xl">
+                <button id="menu-btn" class="md:hidden text-white text-2xl" aria-label="Abrir menu de navegação">
                     ☰
                 </button>
             </div>
@@ -38,6 +57,30 @@
                 <a href="#recomendacao" class="block py-3 text-zinc-300 hover:text-violet-400">Carta de Recomendação</a>
                 <a href="#projetos" class="block py-3 text-zinc-300 hover:text-violet-400">Projetos</a>
                 <a href="#contato" class="block py-3 text-zinc-300 hover:text-violet-400">Contato</a>
+                
+
+                    <div class="ml-2 flex items-center rounded-full border border-zinc-800 bg-zinc-900/70 p-1 backdrop-blur-sm">
+                        <button type="button" class="flex items-center gap-2 rounded-full bg-violet-700 px-3 py-1.5 text-xs font-medium-white transition-colors">
+                            <span>🇧🇷</span>
+                            <span>PT</span>
+                        </button>
+
+                        <span class="mx-1 h-5 w-px bg-zinc-700"></span>
+
+                        <button type="button" class="flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:text-white">
+                            <span>🇺🇸</span>
+                            <span>EN</span>
+                        </button>
+
+                        <span class="mx-1 h-5 w-px bg-zinc-700"></span>
+
+                        <button type="button" class="flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium text-zinc-300/50 transition-colors">
+                            <span>🇪🇸</span>
+                            <span>ES</span>
+                        </button>
+                    </div>
+
+
             </div>
         </header>
 
@@ -48,27 +91,27 @@
                     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-violet-700/10 blur-[120px]"></div>
                 </div>
                 <div class="max-w-3xl mx-auto text-center relative z-10">
-                    <p class="text-violet-400 text-sm tracking-[0.3em] uppercase mb-4 font-medium scroll-reveal">
+                    <p data-i18n="hero.eyebrow" class="text-violet-400 text-sm tracking-[0.3em] uppercase mb-4 font-medium scroll-reveal">
                         Desenvolvedor & Analista de Dados
                     </p>
                     
                     <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight scroll-reveal text-white">
-                        Diogo de Alcantara<br>
-                        <span class="text-violet-600">Brasil</span>
+                        <span data-i18n="hero.firstName">Diogo de Alcantara</span><br>
+                        <span  data-i18n="hero.lastName" class="text-violet-600">Brasil</span>
                     </h1>
 
-                    <p class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed scroll-reveal">
+                    <p data-i18n="hero.description" class="text-zinc-400 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed scroll-reveal">
                         Estudante de Engenharia de Software com foco em desenvolvimento C#/.NET e banco de dados. Experiência em ambiente corporativo com resolução de problemas, organização e entregas ágeis. 
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center scroll-reveal">
-                        <a href="#projetos" class="px-8 py-3 bg-violet-700 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
+                        <a href="#projetos" data-i18n="hero.projectsButton" class="px-8 py-3 bg-violet-700 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity">
                             Ver Projetos
                         </a>
 
                         <a href="#contato" class="px-8 py-3 border border-violet-700 text-violet-400 font-semibold rounded-lg hover:bg-violet-700/10 transition-colors flex items-center justify-center gap-2">
                             <i data-lucide="mail" class="h-[18px] w-[18px]"></i>
-                            Contato
+                            <span data-i18n="hero.contactButton">Contato</span>
                         </a>
                     </div>
 
@@ -79,14 +122,14 @@
             </section>
 
             <section id="habilidades" class="py-24 px-4">
-                <div class="mx-auto max-w-6xl">
+                <div class="mx-auto max-w-7xl">
                     <div class="text-center">
                         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                            Habilidades <span class="text-violet-400"> Técnicas </span>
+                            <span data-i18n="hab.title">Habilidades</span> <span data-i18n="hab.subtitle" class="text-violet-400"> Técnicas </span>
                         </h2>
 
-                        <p class="text-base text-zinc-400 text-center mb-16 scroll-reveal">
-                            Tecnologias e ferramentas que utilizo
+                        <p data-i18n="hab.description" class="text-base text-zinc-400 text-center mb-16 scroll-reveal">
+                            Tecnologias e ferramentas que uso na minha jornada de desenvolvimento
                         </p>
                     </div>
                     
@@ -130,7 +173,7 @@
                             <h3 class="mb-1 text-sm font-semibold text-white">
                                 HTML / CSS / JS
                             </h3>
-                            <p class="text-xs text-zinc-400">
+                            <p data-i18n="hab.skill_1" class="text-xs text-zinc-400">
                                 Front-end básico
                             </p>
 
@@ -144,7 +187,7 @@
                             <h3 class="mb-1 text-sm font-semibold text-white">
                                 Git / GitHub
                             </h3>
-                            <p class="text-xs text-zinc-400">
+                            <p data-i18n="hab.skill_2" class="text-xs text-zinc-400">
                                 Controle de versão
                             </p>
 
@@ -159,7 +202,7 @@
                                 Power BI
                             </h3>
 
-                            <p class="text-xs text-zinc-400">
+                            <p data-i18n="hab.skill_3" class="text-xs text-zinc-400">
                                 Visualização de dados
                             </p>
                         </div>
@@ -173,7 +216,7 @@
                                 Linux
                             </h3>
 
-                            <p class="text-xs text-zinc-400">
+                            <p  data-i18n="hab.skill_4" class="text-xs text-zinc-400">
                                 Usuário
                             </p>
                         </div>
@@ -187,7 +230,7 @@
                                 Visual Studio
                             </h3>
 
-                            <p class="text-xs text-zinc-400">
+                            <p data-i18n="hab.skill_5" class="text-xs text-zinc-400">
                                 IDE principal
                             </p>
                         </div>
@@ -201,7 +244,7 @@
                                 Insomnia / XAMPP
                             </h3>
 
-                            <p class="text-xs text-zinc-400">
+                            <p data-i18n="hab.skill_6"class="text-xs text-zinc-400">
                                 Ferramentas de apoio
                             </p>
                         </div>
@@ -215,10 +258,10 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center">
                         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                            Experiência & <span class="text-violet-400"> Formação </span>
+                            <span data-i18n="exp.title">Experiência &</span> <span data-i18n="exp.subtitle" class="text-violet-400"> Formação </span>
                         </h2>
 
-                        <p class="text-zinc-400 text-center mb-16 scroll-reveal">
+                        <p data-i18n="exp.description" class="text-zinc-400 text-center mb-16 scroll-reveal">
                             Minha trajetória profissional e acadêmica 
                         </p>
                     </div>
@@ -231,27 +274,27 @@
                             <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
 
                             <div class="ml-10 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
-                                <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                <span data-i18n="exp.item1.data" class="text-xs font-medium uppercase tracking-wider text-violet-400">
                                         AGO/2025 – OUT/2025
                                 </span>
 
                                 <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
                                     <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                                    Estagiário de TI
+                                    <span data-i18n="exp.item1.cargo">Estagiário de TI</span>
                                 </h3>
 
 
-                                <p class="mb-2 text-sm text-zinc-400">
+                                <p data-i18n="exp.item1.company" class="mb-2 text-sm text-zinc-400">
                                         CADDI Cloud, Servidor Dedicado e Datacenter
                                 </p>
 
                     
 
                                 <ul class="space-y-1">
-                                    <li class="text-sm leading-relaxed text-zinc-400">• Registro e acompanhamento de chamados (Tiflux), com priorização e organização de fluxo</li>
-                                    <li class="text-sm leading-relaxed text-zinc-400">• Suporte a usuários e sistemas, com instalação/configuração de softwares e troubleshooting</li>
-                                    <li class="text-sm leading-relaxed text-zinc-400">• Geração de relatórios de máquinas ativas e conferência de dados para consistência</li>
-                                    <li class="text-sm leading-relaxed text-zinc-400">• Atendimento médio de 20+ chamados/dia com foco em agilidade</li>
+                                    <li data-i18n="exp.item1.descrip_1" class="text-sm leading-relaxed text-zinc-400">• Registro e acompanhamento de chamados (Tiflux), com priorização e organização de fluxo</li>
+                                    <li data-i18n="exp.item1.descrip_2" class="text-sm leading-relaxed text-zinc-400">• Suporte a usuários e sistemas, com instalação/configuração de softwares e troubleshooting</li>
+                                    <li data-i18n="exp.item1.descrip_3" class="text-sm leading-relaxed text-zinc-400">• Geração de relatórios de máquinas ativas e conferência de dados para consistência</li>
+                                    <li data-i18n="exp.item1.descrip_4" class="text-sm leading-relaxed text-zinc-400">• Atendimento médio de 20+ chamados/dia com foco em agilidade</li>
                                 </ul>
                             </div>
                         </div>
@@ -260,23 +303,23 @@
                             <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
 
                             <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
-                                <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                <span data-i18n="exp.item2.data" class="text-xs font-medium uppercase tracking-wider text-violet-400">
                                         JUL/2022 – AGO/2025
                                 </span>
 
                                 <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
                                         <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                                        Auxiliar Administrativo
+                                        <span data-i18n="exp.item2.cargo">Auxiliar Administrativo</span>
                                 </h3>
 
-                                <p class="mb-2 text-sm text-zinc-400">
+                                <p data-i18n="exp.item2.company" class="mb-2 text-sm text-zinc-400">
                                         Transportes Bertolini
                                 </p>
 
                                 <ul class="space-y-1">
-                                        <li class="text-sm leading-relaxed text-zinc-400">• Rotinas administrativas com foco em digitalização e automação de dados fiscais</li>
-                                        <li class="text-sm leading-relaxed text-zinc-400">• Geração diária de relatórios de carga e acompanhamento operacional</li>
-                                        <li class="text-sm leading-relaxed text-zinc-400">• Uso de planilhas para análise de informações e apoio em processos</li>
+                                        <li data-i18n="exp.item2.descrip_5" class="text-sm leading-relaxed text-zinc-400">• Rotinas administrativas com foco em digitalização e automação de dados fiscais</li>
+                                        <li data-i18n="exp.item2.descrip_6" class="text-sm leading-relaxed text-zinc-400">• Geração diária de relatórios de carga e acompanhamento operacional</li>
+                                        <li data-i18n="exp.item2.descrip_7" class="text-sm leading-relaxed text-zinc-400">• Uso de planilhas para análise de informações e apoio em processos</li>
                                 </ul>
                             </div>
 
@@ -294,18 +337,18 @@
 
                                 <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white md:justify-end">
                                     <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                                    Engenharia de Software
+                                    <span data-i18n="exp.item3.area">Engenharia de Software</span>
                                 </h3>
 
 
-                                <p class="mb-2 text-sm text-zinc-400">
+                                <p data-i18n="exp.item3.school" class="mb-2 text-sm text-zinc-400">
                                     Centro Universitário ENIAC (Cursando)
                                 </p>
 
                     
 
                                 <ul class="space-y-1">
-                                    <li class="text-sm leading-relaxed text-zinc-400">• Graduação em andamento com foco em desenvolvimento e banco de dados</li>
+                                    <li data-i18n="exp.item3.descrip_8" class="text-sm leading-relaxed text-zinc-400">• Graduação em andamento com foco em desenvolvimento e banco de dados</li>
                                 </ul>
                             </div>
                         </div>
@@ -314,41 +357,38 @@
                             <div class="absolute left-4 md:left-1/2 top-1 z-10 h-3 w-3 -translate-x-1.5 rounded-full border-2 border-[hsl(220,20%,7%)] bg-violet-400"></div>
 
                             <div class="ml-10 md:ml-0 md:w-1/2 md:pl-12 ">
-                                <span class="text-xs font-medium uppercase tracking-wider text-violet-400">
+                                <span  class="text-xs font-medium uppercase tracking-wider text-violet-400">
                                     2020 – 2022
                                 </span>
 
                                 <h3 class="mt-1 flex items-center gap-2 text-lg font-bold text-white">
                                         <i data-lucide="briefcase" class="h-4 w-4 text-violet-400 shrink-0"></i>
-                                        Técnico em Administração
+                                        <span data-i18n="exp.item4.area"> Técnico em Administração</span>
                                 </h3>
 
-                                <p class="mb-2 text-sm text-zinc-400">
-                                    ETEC (Concluído)
+                                <p data-i18n="exp.item4.school" class="mb-2 text-sm text-zinc-400">
+                                    ETEC Professor Horácio Augusto da Silveira (Concluído)
                                 </p>
 
                                 <ul class="space-y-1">
-                                        <li class="text-sm leading-relaxed text-zinc-400">• Formação técnica concluída</li>
+                                        <li data-i18n="exp.item4.descrip_9" class="text-sm leading-relaxed text-zinc-400">• Formação técnica concluída</li>
                                 </ul>
                             </div>
-
                         </div>
-
-
                     </div>
                 </div>
             </section>
 
 
             <section id="recomendacao" class="px-6 py-24">
-                <div class="mx-auto max-w-6xl">
+                <div class="mx-auto max-w-7xl">
 
                     <div class="text-center">
                         <h2 class="font-serif text-5xl font-semibold text-white"> 
-                            Carta de <span class="text-violet-400"> Recomendação</span>
+                           <span data-i18n="recom.title" > Carta de </span> <span data-i18n="recom.subtitle"  class="text-violet-400"> Recomendação</span>
                         </h2>
 
-                        <p class="mt-4 text-zinc-400 text-sm">
+                        <p data-i18n="recom.description" class="mt-4 text-zinc-400 text-sm">
                             Carta emitida pela empresa CADDI Soluções em Tecnologia após minha atuação como estagiário na área de TI.
                         </p>
 
@@ -356,7 +396,7 @@
                             target="_blank" rel="noopener noreferrer"
                             class="mt-6 inline-flex items-center gap-2 rounded-xl bg-violet-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-violet-600">
                             <i data-lucide="file-text"></i>
-                            Ver Carta de Recomendação
+                            <span data-i18n="recom.btn" >Ver Carta de Recomendação</span>
                         </a>
 
                     </div>
@@ -366,13 +406,13 @@
 
 
             <section id="projetos" class="py-24 px-4">
-                <div class="mx-auto max-w-6xl">
+                <div class="mx-auto max-w-7xl">
                     <div class="text-center">
                         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                            Meus <span class="text-violet-400"> Projetos </span>
+                            <span data-i18n="proj.title" >Meus</span> <span data-i18n="proj.subtitle" class="text-violet-400"> Projetos </span>
                         </h2>
 
-                        <p class="text-zinc-400 text-center mb-16 scroll-reveal">
+                        <p data-i18n="proj.description"  class="text-zinc-400 text-center mb-16 scroll-reveal">
                             Projetos pessoais e acadêmicos
                         </p>
 
@@ -391,10 +431,10 @@
                             <div class="p-6">
                                 
                                 <h3 class="font-bold text-lg mb-2 text-white">
-                                    Programa de Chamados
+                                    <span data-i18n="proj.one.title" >Programa de Chamados</span>
                                 </h3>
 
-                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                <p data-i18n="proj.one.subtitle"  class="text-sm text-zinc-400 mb-4 leading-relaxed">
                                     Sistema para abrir, listar e fechar chamados de TI em C# com persistência em PostgreSQL.
                                 </p>
 
@@ -406,7 +446,7 @@
 
                                 <a href="https://github.com/dgluxe/ti_chamados"  target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                                     <i data-lucide="github"  class="h-4 w-4"></i>
-                                        Ver no GitHub
+                                        <span data-i18n="proj.one.btn" >Ver no GitHub </span>
 
                                     <i data-lucide="external-link" class="h-4 w-4"> </i>
                                     
@@ -428,10 +468,10 @@
                             <div class="p-6">
 
                                 <h3 class="font-bold text-lg mb-2 text-white">
-                                    Controle de Cargas SQL
+                                    <span data-i18n="proj.two.title" >Controle de Cargas SQL </span>
                                 </h3>
 
-                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                <p data-i18n="proj.two.subtitle" class="text-sm text-zinc-400 mb-4 leading-relaxed">
                                   Sistema para organizar e consultar cargas com PostgreSQL e scripts SQL voltados à rotina operacional.
                                 </p>
 
@@ -443,7 +483,7 @@
 
                                 <a href="https://github.com/dgluxe/cargas-sql-postgres" target="_blank" rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                                     <i data-lucide="github" class="h-4 w-4"></i>
-                                        Ver no GitHub
+                                        <span data-i18n="proj.two.btn"> Ver no GitHub </span>
 
                                     <i data-lucide="external-link" class="h-4 w-4"></i>
             
@@ -465,10 +505,10 @@
                             <div class="p-6">
 
                                 <h3 class="font-bold text-lg mb-2 text-white">
-                                    Jogo Educativo 2D
+                                    <span data-i18n="proj.thr.title" >Jogo Educativo 2D </span>
                                 </h3>
 
-                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                <p data-i18n="proj.thr.subtitle" class="text-sm text-zinc-400 mb-4 leading-relaxed">
                                     Jogo educativo desenvolvido para conscientizar sobre o ODS 2 de forma interativa e acessível.
                                 </p>
 
@@ -480,7 +520,7 @@
 
                                 <a href="https://www.construct.net/en/free-online-games/herois-colheita-82507/play" target="_blank"  rel="noopener noreferrer"   class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                                     <i data-lucide="gamepad" class="h-4 w-4"></i>
-                                        Jogar
+                                        <span data-i18n="proj.thr.btn">Jogar </span>
                                     
                                     <i data-lucide="external-link" class="h-4 w-4"></i>
                                 </a>
@@ -504,10 +544,10 @@
                             <div class="p-6">
 
                                 <h3 class="font-bold text-lg mb-2 text-white">
-                                Planejamento de E-commerce (TCC)
+                                <span data-i18n="proj.four.title"> Planejamento de E-commerce (TCC) </span>
                                 </h3>
 
-                                <p class="text-sm text-zinc-400 mb-4 leading-relaxed">
+                                <p data-i18n="proj.four.subtitle" class="text-sm text-zinc-400 mb-4 leading-relaxed">
                                     Trabalho de Conclusão de Curso desenvolvido em grupo
                                     no curso Técnico em Administração, analisando o
                                     funcionamento do e-commerce, logística, segurança,
@@ -515,14 +555,14 @@
                                 </p>
 
                                 <div class="mt-4 flex flex-wrap gap-2">
-                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">E-commerce</span>
-                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Administração</span>
-                                    <span class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Planejamento</span>
+                                    <span data-i18n="proj.four.descrip" class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">E-commerce</span>
+                                    <span data-i18n="proj.four.descrip2"  class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Administração</span>
+                                    <span data-i18n="proj.four.descrip3" class="rounded-full bg-zinc-800 px-2 py-1 text-xs text-violet-400">Planejamento</span>
                                 </div>
 
                                 <a href="pdf/TCC-E-COMMERCE.pdf" target="_blank"  rel="noopener noreferrer"  class="mt-4 inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 transition-colors">
                                     <i data-lucide="file-text" class="h-4 w-4"></i>
-                                        Ver TCC
+                                        <span data-i18n="proj.four.btn">Ver TCC </span>
 
                                     <i data-lucide="external-link" class="h-4 w-4"></i>
                                 </a>
@@ -541,10 +581,10 @@
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center">
                         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-4 scroll-reveal text-white">
-                            Entre em <span class="text-violet-400"> Contato </span>
+                            <span data-i18n="cont.title" > Entre em </span> <span data-i18n="cont.subtitle" class="text-violet-400"> Contato </span>
                         </h2>
 
-                        <p class="text-zinc-400 text-center mb-16 scroll-reveal">
+                        <p data-i18n="cont.description" class="text-zinc-400 text-center mb-16 scroll-reveal">
                             Vamos conversar sobre oportunidades
                         </p>
                     </div>
@@ -552,7 +592,7 @@
                     <div class="grid gap-12 md:grid-cols-2">
                         <div class="scroll-reveal space-y-6">
                             <h3 class="font-semibold text-lg mb-4 text-white">
-                                Informações
+                                <span data-i18n="cont.inf">Informações</span>
                             </h3>
 
                             <div class="space-y-4">
@@ -594,11 +634,13 @@
                             required
                             name="name"
                             placeholder="Seu nome"
+                            data-i18n="cont.name"
                             class="w-full rounded-lg border border-zinc-800 bg-zinc-900 px-4 py-3 text-white placeholder:text-zinc-500 outline-none transition-colors focus:border-violet-400"
                             >
 
                             <input
                             type="email"
+                            data-i18n="cont.email"
                             placeholder="Seu e-mail"
                             required
                             name="email"
@@ -606,6 +648,7 @@
                             >
 
                             <textarea
+                            data-i18n="cont.message"
                             placeholder="Sua mensagem"
                             required
                             rows="5"
@@ -618,7 +661,7 @@
                                 class="w-full rounded-lg bg-violet-700 px-6 py-3 text-white font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                             >
                             <i data-lucide="send" class="h-4 w-4"></i>
-                                Enviar Mensagem
+                            <span data-i18n="cont.button">Enviar Mensagem</span>
                             </button>
 
                             <div id="form-status" class="mt-4 hidden rounded-lg border px-4 py-3 text-sm font-medium"></div>
@@ -633,10 +676,10 @@
         </main>
 
         <footer class="py-8 px-4 border-t border-zinc-800 text-center">
-            <div class="mx-auto max-w-6xl flex flex-col items-center gap-4 text-zinc-400">
+            <div class="mx-auto max-w-7xl flex flex-col items-center gap-4 text-zinc-400">
 
                 <p class="text-sm text-zinc-400">
-                    © 2026 <span class="text-violet-400">Diogo Brasil</span>. Todos os direitos reservados.
+                    © 2026 <span class="text-violet-400">Diogo Brasil</span>. <span data-i18n="fot.inf" >Todos os direitos reservados. </span>
                 </p>
 
                 <div class="flex items-center gap-6">

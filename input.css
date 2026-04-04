@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+#site-header {
+    transition: all 0.3s ease;
+}
+
+#site-header.scrolled .header-box {
+    background: rgba(15, 17, 23, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(63, 63, 70, 0.45);
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, 0.10);
+}
+
+.img-zoom {
+    overflow: hidden;
+}
+
+.img-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.img-zoom:hover img {
+    transform: scale(1.1);
+}
+
+.lang-btn {
+    min-width: 64px;
+    justify-content:center;
+}
+
+.lang-btn-active {
+    background: rgb(109 40 217);
+    color:white;
+}
+
+.lang-btn-inactive{
+    background: transparent;
+    color:rgb(212 212 216);
+}
+
+.lang-disabled {
+    background: transparent;
+    color: rgba(212, 212, 216, 0.5);
+}

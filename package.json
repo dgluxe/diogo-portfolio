@@ -1,0 +1,25 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Site: https://dgluxe.github.io/diogo-portfolio/",
+  "main": "script.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./input.css -o ./style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgluxe/diogo-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dgluxe/diogo-portfolio/issues"
+  },
+  "homepage": "https://github.com/dgluxe/diogo-portfolio#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}
