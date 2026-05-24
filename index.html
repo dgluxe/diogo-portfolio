@@ -21,7 +21,7 @@
                     <a href="#experiencia" data-i18n="nav.experience" class="transition-colors hover:text-violet-400">Experiência</a>
                     <a href="#recomendacao" data-i18n="nav.recommendation" class="transition-colors hover:text-violet-400">Carta de Recomendação</a>
                     <a href="#projetos" data-i18n="nav.projects" class="transition-colors hover:text-violet-400">Projetos</a>
-                    <a href="#contato"data-i18n="nav.contact" class="transition-colors hover:text-violet-400">Contato</a>
+                    <a href="#contato" data-i18n="nav.contact" class="transition-colors hover:text-violet-400">Contato</a>
 
                     <div class="ml-2 flex items-center rounded-full border border-zinc-800 bg-zinc-900/70 p-1 backdrop-blur-sm">
                         <button id="lang-pt" data-lang="pt" type="button" class="lang-btn lang-btn-active flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors">
@@ -38,7 +38,7 @@
 
                         <span class="mx-1 h-5 w-px bg-zinc-700"></span>
 
-                        <button id="lang-es" data-lang="es" type="button" class="lang-btn lang-btn-disabled flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors">
+                        <button id="lang-es" data-lang="es" type="button" class="lang-btn lang-btn-inactive flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors">
                             <span>🇪🇸</span>
                             <span>ES</span>
                         </button>
@@ -51,33 +51,38 @@
             </div>
 
             <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 px-6 pb-4 bg-[rgba(15,17,23,0.9)] backdrop-blur-md">
-                <a href="#sobre" class="block py-3 text-zinc-300 hover:text-violet-400">Sobre</a>
-                <a href="#habilidades" class="block py-3 text-zinc-300 hover:text-violet-400">Habilidades</a>
-                <a href="#experiencia" class="block py-3 text-zinc-300 hover:text-violet-400">Experiência</a>
-                <a href="#recomendacao" class="block py-3 text-zinc-300 hover:text-violet-400">Carta de Recomendação</a>
-                <a href="#projetos" class="block py-3 text-zinc-300 hover:text-violet-400">Projetos</a>
-                <a href="#contato" class="block py-3 text-zinc-300 hover:text-violet-400">Contato</a>
+                <a href="#sobre" data-i18n="nav.about" class="block py-3 text-zinc-300 hover:text-violet-400">Sobre</a>
+                <a href="#habilidades" data-i18n="nav.skills"  class="block py-3 text-zinc-300 hover:text-violet-400">Habilidades</a>
+                <a href="#experiencia" data-i18n="nav.experience" class="block py-3 text-zinc-300 hover:text-violet-400">Experiência</a>
+                <a href="#recomendacao" data-i18n="nav.recommendation" class="block py-3 text-zinc-300 hover:text-violet-400">Carta de Recomendação</a>
+                <a href="#projetos" data-i18n="nav.projects" class="block py-3 text-zinc-300 hover:text-violet-400">Projetos</a>
+                <a href="#contato" data-i18n="nav.contact" class="block py-3 text-zinc-300 hover:text-violet-400">Contato</a>
                 
 
-                    <div class="ml-2 flex items-center rounded-full border border-zinc-800 bg-zinc-900/70 p-1 backdrop-blur-sm">
-                        <button type="button" class="flex items-center gap-2 rounded-full bg-violet-700 px-3 py-1.5 text-xs font-medium-white transition-colors">
+                    <div class="mt-4 flex items-center justify-center rounded-full border border-zinc-800 bg-zinc-900/70 p-1 backdrop-blur-sm">
+    
+                        <button id="lang-pt-mobile" data-lang="pt" type="button"
+                            class="lang-btn lang-btn-active flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors">
                             <span>🇧🇷</span>
                             <span>PT</span>
                         </button>
 
                         <span class="mx-1 h-5 w-px bg-zinc-700"></span>
 
-                        <button type="button" class="flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium text-zinc-300 transition-colors hover:text-white">
+                        <button id="lang-en-mobile" data-lang="en" type="button"
+                            class="lang-btn lang-btn-inactive flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:text-white">
                             <span>🇺🇸</span>
                             <span>EN</span>
                         </button>
 
                         <span class="mx-1 h-5 w-px bg-zinc-700"></span>
 
-                        <button type="button" class="flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium text-zinc-300/50 transition-colors">
+                        <button id="lang-es-mobile" data-lang="es" type="button"
+                            class="lang-btn lang-btn-inactive flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:text-white">
                             <span>🇪🇸</span>
                             <span>ES</span>
                         </button>
+
                     </div>
 
 
@@ -703,7 +708,9 @@
         <script src="script.js" defer></script>
         <script src="https://unpkg.com/lucide@latest"></script>
         <script> 
-            lucide.createIcons();
+        window.addEventListener("DOMContentLoaded", () => {
+        lucide.createIcons();
+        });
         </script>
     </body>
 </html>

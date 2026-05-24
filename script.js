@@ -84,13 +84,15 @@ if (contatoForm) {
             return;
         }
 
-        if (!email.includes("@")) {
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
             mostrarStatus(
                 "Digite um e-mail válido.",
                 "mt-4 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-300"
             );
             return;
         }
+
 
         if (mensagemSemEspacos.length < 5) {
             mostrarStatus(
@@ -142,43 +144,34 @@ if (contatoForm) {
 }
 
 const langButtons = document.querySelectorAll(".lang-btn");
-const langPt = document.getElementById("lang-pt");
-const langEn = document.getElementById("lang-en");
-const langEs = document.getElementById("lang-es");
 
+langButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const lang = button.dataset.lang;
+
+        changeLanguage(lang);
+    });
+});
+
+function changeLanguage(lang) {
+    setActiveLanguage(lang);
+    applyTranslations(lang);
+    localStorage.setItem("language", lang);
+}
 function setActiveLanguage(lang) {
-
     langButtons.forEach((button) => {
-        button.classList.remove("lang-btn-active", "lang-btn-inactive", "lang-btn-disabled");
-        
-        if (button.dataset.lang === "es") {
-            button.classList.add("lang-btn-disabled");
-            return;
-        }
+        button.classList.remove(
+            "lang-btn-active",
+            "lang-btn-inactive"
+        );
+
         if (button.dataset.lang === lang) {
             button.classList.add("lang-btn-active");
         } else {
             button.classList.add("lang-btn-inactive");
         }
     });
-}
-
-
-    if (langPt) {
-        langPt.addEventListener("click", () => {
-            setActiveLanguage("pt");
-            applyTranslations("pt")
-        });
-    }
-
-    if (langEn) {
-        langEn.addEventListener("click", () => {
-            setActiveLanguage("en");
-            applyTranslations("en")
-        });
-    }
-
-    
+}    
 
     const translations = {
         pt: {
@@ -438,6 +431,131 @@ function setActiveLanguage(lang) {
             fot: {
                 inf: "All rights reserved."
             }
+        },
+
+        es: {
+            nav: {
+                about: "Sobre mí",
+                skills: "Habilidades",
+                experience: "Experiencia",
+                recommendation: "Carta de recomendación",
+                projects: "Proyectos",
+                contact: "Contacto"
+            },
+            hero: {
+                eyebrow: "Desarrollador y Analista de Datos",
+                firstName: "Diogo de Alcantara",
+                lastName: "Brasil",
+                description: "Estudiante de Ingeniería de Software enfocado en desarrollo C#/.NET y bases de datos. Experiencia en entornos corporativos con resolución de problemas, organización y entregas ágiles.",
+                projectsButton: "Ver Proyectos",
+                contactButton: "Contacto"
+            },
+
+            hab: {
+                    title: "Habilidades",
+                    subtitle: "Técnicas",
+                    description: "Tecnologías y herramientas que utilizo en mi camino de desarrollo",
+                    skill_1: "Front-end básico",
+                    skill_2: "Control de versiones",
+                    skill_3: "Visualización de datos",
+                    skill_4: "Soporte al usuario",
+                    skill_5: "IDE principal",
+                    skill_6: "Herramientas de soporte"
+            },
+
+            exp: {
+                title: "Experiencia y",
+                subtitle: "Educación",
+                description: "Mi trayectoria profesional y académica",
+
+                item1: {
+                    data: "AGO/2025 – OCT/2025",
+                    cargo: "Pasante de TI",
+                    company: "CADDI Cloud, Dedicated Servers and Datacenter",
+                    descrip_1: "• Registro y seguimiento de tickets (Tiflux), con priorización y organización del flujo de trabajo",
+                    descrip_2: "• Soporte a usuarios y sistemas, incluyendo instalación/configuración de software y resolución de problemas",
+                    descrip_3: "• Generación de informes de máquinas activas y validación de consistencia de datos",
+                    descrip_4: "• Promedio de más de 20 tickets atendidos por día con enfoque en la agilidad"
+                },
+
+                item2: {
+                    data: "JUL/2022 – AGO/2025",
+                    cargo: "Asistente Administrativo",
+                    company: "Transportes Bertolini",
+                    descrip_5: "• Rutinas administrativas enfocadas en la digitalización y automatización de datos fiscales",
+                    descrip_6: "• Generación diaria de informes de carga y monitoreo operativo",
+                    descrip_7: "• Uso de hojas de cálculo para análisis de datos y soporte de procesos"
+                },
+
+                item3: {
+                    area: "Ingeniería de Software",
+                    school: "Centro Universitário ENIAC (En curso)",
+                    descrip_8: "• Carrera de grado en curso enfocada en desarrollo y bases de datos"
+                },
+
+                item4: {
+                    area: "Técnico en Administración",
+                    school: "ETEC Professor Horácio Augusto da Silveira",
+                    descrip_9: "• Educación técnica completada"
+                }
+            },
+
+            recom: {
+                title: "Carta de",
+                subtitle: "Recomendación",
+                description: "Carta emitida por CADDI Soluções em Tecnologia tras mi trabajo como pasante de TI.",
+                btn: "Ver Carta de Recomendación"
+            },
+
+            proj: {
+                title: "Mis",
+                subtitle: "Proyectos",
+                description: "Proyectos personales y académicos",
+
+                one: {
+                    title: "Ticket System",
+                    subtitle: "Sistema para crear, listar y cerrar tickets de TI en C# con persistencia en PostgreSQL.",
+                    btn: "Ver en GitHub"
+                },
+
+                two: {
+                    title: "SQL Load Management",
+                    subtitle: "Sistema para organizar y consultar cargas utilizando PostgreSQL y scripts SQL enfocados en rutinas operativas.",
+                    btn: "Ver en GitHub"
+                },
+
+                thr: {
+                    title: "Juego Educativo 2D",
+                    subtitle: "Juego educativo desarrollado para concientizar sobre el ODS 2 de manera interactiva y accesible.",
+                    btn: "Jugar"
+                },
+
+                four: {
+                    title: "Planificación de E-commerce (Proyecto Final)",
+                    subtitle: "Proyecto final de carrera desarrollado en grupo durante el curso Técnico en Administración, analizando operaciones de comercio electrónico, logística, seguridad, métodos de pago y tendencias del mercado digital.",
+
+                    descrip: "E-commerce",
+                    descrip2: "Administración",
+                    descrip3: "Planificación",
+
+                    btn: "Ver Proyecto"
+                }
+            },
+            
+            cont: {
+                title: "Ponte en",
+                subtitle: "Contacto",
+                description: "Hablemos de oportunidades",
+                inf: "Información",
+                name: "Tu nombre",
+                email: "Tu correo electrónico",
+                message: "Tu mensaje",
+                button: "Enviar mensaje"
+            },
+
+            fot: {
+                inf: "Todos los derechos reservados."
+            }
         }
     }
 
@@ -451,10 +569,10 @@ function setActiveLanguage(lang) {
             let value = translations[lang];
 
             keys.forEach((k) => {
-                value = value[k];
+                value = value?.[k];
             });
 
-            if (!value) return;
+            if (value === undefined) return;
 
             // INPUT E TEXTAREA
             if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
@@ -466,5 +584,5 @@ function setActiveLanguage(lang) {
         });
     }
 
-        setActiveLanguage("pt");
-    applyTranslations("pt")
+        const savedLanguage = localStorage.getItem("language") || "pt";
+        changeLanguage(savedLanguage);
