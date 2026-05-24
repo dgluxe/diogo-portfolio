@@ -14,23 +14,27 @@ const mobileMenu = document.getElementById("mobile-menu");
 // Abre e fecha o menu normalmente sem mexer na rolagem do sistema
 menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
-    menuBtn.textContent = mobileMenu.classList.contains("hidden") ? "☰" : "✕";
+    
+    if (!mobileMenu.classList.contains("hidden")) {
+        menuBtn.textContent = "✕";
+        // ISSO TRAVA O SITE NO FUNDO TOTALMENTE (O TOQUE NÃO PASSA PRO SITE)
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
+    } else {
+        menuBtn.textContent = "☰";
+        // ISSO LIBERA O SITE DE VOLTA QUANDO FECHA
+        document.body.style.position = "";
+        document.body.style.width = "";
+    }
 });
 
-// Fecha o menu se o usuário clicar em qualquer link interno
 document.querySelectorAll("#mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
         menuBtn.textContent = "☰";
-    });
-});
-
-// EVENTO DE CLICAR EM UM LINK DO MENU
-document.querySelectorAll("#mobile-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-        menuBtn.textContent = "☰";
-        document.documentElement.style.overflow = ""; // Garante a liberação ao navegar
+        // GARANTE QUE DESTRAVA SE CLICAR NO LINK
+        document.body.style.position = "";
+        document.body.style.width = "";
     });
 });
 
