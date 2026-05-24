@@ -13,13 +13,21 @@ const mobileMenu = document.getElementById("mobile-menu");
 
 menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
-    menuBtn.textContent = mobileMenu.classList.contains("hidden") ? "☰" : "✕";
+    
+    if (!mobileMenu.classList.contains("hidden")) {
+        menuBtn.textContent = "✕";
+        document.body.style.overflow = "hidden"; // ISSO TRAVA O FUNDO COMPLETAMENTE
+    } else {
+        menuBtn.textContent = "☰";
+        document.body.style.overflow = ""; // ISSO LIBERA O FUNDO DE VOLTA
+    }
 });
 
 document.querySelectorAll("#mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
         menuBtn.textContent = "☰";
+        document.body.style.overflow = ""; // GARANTE QUE LIBERA SE CLICAR NO LINK
     });
 });
 
