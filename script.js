@@ -308,131 +308,6 @@ function setActiveLanguage(lang) {
         },
         
 
-        en: {
-            nav: {
-                about: "About",
-                skills: "Skills",
-                experience: "Experience",
-                recommendation: "Recommendation Letter",
-                projects: "Projects",
-                contact: "Contact"
-            },
-            hero: {
-                eyebrow: "Developer & Data Analyst",
-                firstName: "Diogo de Alcantara",
-                lastName: "Brasil",
-                description: "Software Engineering student focused on C#/.NET development and databases. Experience in corporate environments with problem solving, organization, and agile deliveries.",
-                projectsButton: "View Projects",
-                contactButton: "Contact"
-            },
-
-            hab: {
-                    title: "Skills",
-                    subtitle:"Technical",
-                    description:"Technologies and tools I use in my development journey",
-                    skill_1:"Basic front-end",
-                    skill_2:"Version control",
-                    skill_3:"Data visualization",
-                    skill_4:"User support",
-                    skill_5:"Main IDE",
-                    skill_6:"Support tools"
-            },
-
-            exp: {
-                title: "Experience &",
-                subtitle: "Education",
-                description: "My professional and academic journey",
-
-                item1: {
-                    data: "AUG/2025 – OCT/2025",
-                    cargo: "IT Intern",
-                    company: "CADDI Cloud, Dedicated Servers and Datacenter",
-                    descrip_1: "• Ticket registration and tracking (Tiflux), with prioritization and workflow organization",
-                    descrip_2: "• User and system support, including software installation/configuration and troubleshooting",
-                    descrip_3: "• Generation of active machine reports and data validation for consistency",
-                    descrip_4: "• Average of 20+ tickets handled per day with focus on agility"
-                },
-
-                item2: {
-                    data: "JUL/2022 – AUG/2025",
-                    cargo: "Administrative Assistant",
-                    company: "Transportes Bertolini",
-                    descrip_5: "• Administrative routines focused on digitization and automation of tax data",
-                    descrip_6: "• Daily generation of cargo reports and operational monitoring",
-                    descrip_7: "• Use of spreadsheets for data analysis and process support"
-                },
-
-                item3: {
-                    area: "Software Engineering",
-                    school: "Centro Universitário ENIAC (Ongoing)",
-                    descrip_8: "• Undergraduate degree in progress focused on development and databases"
-                },
-
-                item4: {
-                    area: "Technical Degree in Administration",
-                    school: "ETEC Professor Horácio Augusto da Silveira",
-                    descrip_9: "• Completed technical education"
-                }
-            },
-
-            recom: {
-                title: "Letter of",
-                subtitle: "Recommendation",
-                description: "Letter issued by CADDI Soluções em Tecnologia after my work as an IT intern.",
-                btn: "View Recommendation Letter"
-            },
-
-            proj: {
-                title: "My",
-                subtitle: "Projects",
-                description: "Personal and academic projects",
-
-                one: {
-                    title: "Ticket System",
-                    subtitle: "System to create, list and close IT tickets in C# with PostgreSQL persistence.",
-                    btn: "View on GitHub"
-                },
-
-                two: {
-                    title: "SQL Load Management",
-                    subtitle: "System to organize and query loads using PostgreSQL and SQL scripts focused on operational routines.",
-                    btn: "View on GitHub"
-                },
-
-                thr: {
-                    title: "2D Educational Game",
-                    subtitle: "Educational game developed to raise awareness about SDG 2 in an interactive and accessible way.",
-                    btn: "Play"
-                },
-
-                four: {
-                    title: "E-commerce Planning (Final Project)",
-                    subtitle: "Final course project developed in a group during the Technical Administration course, analyzing e-commerce operations, logistics, security, payment methods, and digital market trends.",
-
-                    descrip: "E-commerce",
-                    descrip2: "Administration",
-                    descrip3: "Planning",
-
-                    btn: "View Project"
-                }
-            },
-            
-            cont: {
-                title: "Get in",
-                subtitle: "Touch",
-                description: "Let's talk about opportunities",
-                inf: "Information",
-                name: "Your name",
-                email: "Your email",
-                message: "Your message",
-                button: "Send Message"
-            },
-
-            fot: {
-                inf: "All rights reserved."
-            }
-        },
-
         es: {
             nav: {
                 about: "Sobre mí",
@@ -446,7 +321,7 @@ function setActiveLanguage(lang) {
                 eyebrow: "Desarrollador y Analista de Datos",
                 firstName: "Diogo de Alcantara",
                 lastName: "Brasil",
-                description: "Estudiante de Ingeniería de Software enfocado en desarrollo C#/.NET y bases de datos. Experiencia en entornos corporativos con resolución de problemas, organización y entregas ágiles.",
+                description: "Estudiante de Ingeniería de Software enfocado en el desarrollo C#/.NET y bases de datos. Experiencia en entornos corporativos con resolución de problemas, organización y entregas ágiles.",
                 projectsButton: "Ver Proyectos",
                 contactButton: "Contacto"
             },
@@ -454,7 +329,7 @@ function setActiveLanguage(lang) {
             hab: {
                     title: "Habilidades",
                     subtitle: "Técnicas",
-                    description: "Tecnologías y herramientas que utilizo en mi camino de desarrollo",
+                    description: "Tecnologías y herramientas que utilizo en mi trayectoria de desarrollo",
                     skill_1: "Front-end básico",
                     skill_2: "Control de versiones",
                     skill_3: "Visualización de datos",
@@ -472,38 +347,38 @@ function setActiveLanguage(lang) {
                     data: "AGO/2025 – OCT/2025",
                     cargo: "Pasante de TI",
                     company: "CADDI Cloud, Dedicated Servers and Datacenter",
-                    descrip_1: "• Registro y seguimiento de tickets (Tiflux), con priorización y organización del flujo de trabajo",
-                    descrip_2: "• Soporte a usuarios y sistemas, incluyendo instalación/configuración de software y resolución de problemas",
-                    descrip_3: "• Generación de informes de máquinas activas y validación de consistencia de datos",
-                    descrip_4: "• Promedio de más de 20 tickets atendidos por día con enfoque en la agilidad"
+                    descrip_1: "• Registro y seguimiento de tickets (Tiflux), con priorización y organización del flujo de trabajo.",
+                    descrip_2: "• Soporte técnico a usuarios y sistemas, incluyendo instalación/configuración de software y resolución de problemas.",
+                    descrip_3: "• Generación de informes de equipos activos y validación de la consistencia de datos.",
+                    descrip_4: "• Promedio de más de 20 tickets atendidos por día con enfoque en la agilidade y eficiencia."
                 },
 
                 item2: {
                     data: "JUL/2022 – AGO/2025",
                     cargo: "Asistente Administrativo",
                     company: "Transportes Bertolini",
-                    descrip_5: "• Rutinas administrativas enfocadas en la digitalización y automatización de datos fiscales",
-                    descrip_6: "• Generación diaria de informes de carga y monitoreo operativo",
-                    descrip_7: "• Uso de hojas de cálculo para análisis de datos y soporte de procesos"
+                    descrip_5: "• Rutinas administrativas enfocadas en la digitalización y automatización de datos fiscales.",
+                    descrip_6: "• Generación diaria de informes de carga y monitoreo operativo.",
+                    descrip_7: "• Uso de hojas de cálculo para el análisis de datos y soporte en la optimización de procesos."
                 },
 
                 item3: {
                     area: "Ingeniería de Software",
                     school: "Centro Universitário ENIAC (En curso)",
-                    descrip_8: "• Carrera de grado en curso enfocada en desarrollo y bases de datos"
+                    descrip_8: "• Carrera universitaria en curso enfocada en desarrollo de software y bases de datos."
                 },
 
                 item4: {
                     area: "Técnico en Administración",
                     school: "ETEC Professor Horácio Augusto da Silveira",
-                    descrip_9: "• Educación técnica completada"
+                    descrip_9: "• Educación técnica completa."
                 }
             },
 
             recom: {
                 title: "Carta de",
                 subtitle: "Recomendación",
-                description: "Carta emitida por CADDI Soluções em Tecnologia tras mi trabajo como pasante de TI.",
+                description: "Carta emitida por CADDI Soluções em Tecnologia tras mi desempeño como pasante de TI.",
                 btn: "Ver Carta de Recomendación"
             },
 
@@ -514,7 +389,7 @@ function setActiveLanguage(lang) {
 
                 one: {
                     title: "Ticket System",
-                    subtitle: "Sistema para crear, listar y cerrar tickets de TI en C# con persistencia en PostgreSQL.",
+                    subtitle: "Sistema para crear, listar y cerrar tickets de TI en C# con persistencia de datos en PostgreSQL.",
                     btn: "Ver en GitHub"
                 },
 
@@ -532,7 +407,7 @@ function setActiveLanguage(lang) {
 
                 four: {
                     title: "Planificación de E-commerce (Proyecto Final)",
-                    subtitle: "Proyecto final de carrera desarrollado en grupo durante el curso Técnico en Administración, analizando operaciones de comercio electrónico, logística, seguridad, métodos de pago y tendencias del mercado digital.",
+                    subtitle: "Proyecto final de carrera desarrollado en grupo durante el curso de Técnico en Administración, analizando operaciones de comercio electrónico, logística, seguridad, métodos de pago y tendencias del mercado digital.",
 
                     descrip: "E-commerce",
                     descrip2: "Administración",
@@ -543,7 +418,7 @@ function setActiveLanguage(lang) {
             },
             
             cont: {
-                title: "Ponte en",
+                title: "Póngase en",
                 subtitle: "Contacto",
                 description: "Hablemos de oportunidades",
                 inf: "Información",
