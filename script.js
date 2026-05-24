@@ -321,21 +321,21 @@ function setActiveLanguage(lang) {
                 eyebrow: "Developer & Data Analyst",
                 firstName: "Diogo de Alcantara",
                 lastName: "Brasil",
-                description: "Software Engineering student focused on C#/.NET development and databases. Experience in corporate environments with problem solving, organization, and agile deliveries.",
+                description: "Software Engineering student focused on C#/.NET development and databases. Experienced in corporate environments with a strong track record in problem-solving, organization, and agile deliveries.",
                 projectsButton: "View Projects",
                 contactButton: "Contact"
             },
 
             hab: {
                     title: "Skills",
-                    subtitle:"Technical",
-                    description:"Technologies and tools I use in my development journey",
-                    skill_1:"Basic front-end",
-                    skill_2:"Version control",
-                    skill_3:"Data visualization",
-                    skill_4:"User support",
-                    skill_5:"Main IDE",
-                    skill_6:"Support tools"
+                    subtitle: "Technical",
+                    description: "Technologies and tools I use throughout my development journey",
+                    skill_1: "Foundational Front-end",
+                    skill_2: "Version Control",
+                    skill_3: "Data Visualization",
+                    skill_4: "User Support",
+                    skill_5: "Primary IDE",
+                    skill_6: "Support Tools"
             },
 
             exp: {
@@ -347,67 +347,67 @@ function setActiveLanguage(lang) {
                     data: "AUG/2025 – OCT/2025",
                     cargo: "IT Intern",
                     company: "CADDI Cloud, Dedicated Servers and Datacenter",
-                    descrip_1: "• Ticket registration and tracking (Tiflux), with prioritization and workflow organization",
-                    descrip_2: "• User and system support, including software installation/configuration and troubleshooting",
-                    descrip_3: "• Generation of active machine reports and data validation for consistency",
-                    descrip_4: "• Average of 20+ tickets handled per day with focus on agility"
+                    descrip_1: "• Logged and tracked tickets (Tiflux), ensuring effective prioritization and workflow organization.",
+                    descrip_2: "• Provided user and system support, including software installation, configuration, and troubleshooting.",
+                    descrip_3: "• Generated active hardware reports and validated data consistency.",
+                    descrip_4: "• Handled an average of 20+ tickets per day with a strong focus on agility and efficiency."
                 },
 
                 item2: {
                     data: "JUL/2022 – AUG/2025",
                     cargo: "Administrative Assistant",
                     company: "Transportes Bertolini",
-                    descrip_5: "• Administrative routines focused on digitization and automation of tax data",
-                    descrip_6: "• Daily generation of cargo reports and operational monitoring",
-                    descrip_7: "• Use of spreadsheets for data analysis and process support"
+                    descrip_5: "• Executed administrative routines focused on the digitization and automation of tax data.",
+                    descrip_6: "• Generated daily cargo reports and conducted operational monitoring.",
+                    descrip_7: "• Utilized spreadsheets for data analysis and process optimization support."
                 },
 
                 item3: {
                     area: "Software Engineering",
                     school: "Centro Universitário ENIAC (Ongoing)",
-                    descrip_8: "• Undergraduate degree in progress focused on development and databases"
+                    descrip_8: "• Undergraduate degree focused on software development and database management."
                 },
 
                 item4: {
                     area: "Technical Degree in Administration",
                     school: "ETEC Professor Horácio Augusto da Silveira",
-                    descrip_9: "• Completed technical education"
+                    descrip_9: "• Completed technical program."
                 }
             },
 
             recom: {
                 title: "Letter of",
                 subtitle: "Recommendation",
-                description: "Letter issued by CADDI Soluções em Tecnologia after my work as an IT intern.",
+                description: "Letter issued by CADDI Soluções em Tecnologia following my performance as an IT intern.",
                 btn: "View Recommendation Letter"
             },
 
             proj: {
                 title: "My",
-                subtitle: "Projects",
+                subtitle: "Proyectos", // Nota: Mude para "Projects" se for renderizar apenas em inglês
                 description: "Personal and academic projects",
 
                 one: {
                     title: "Ticket System",
-                    subtitle: "System to create, list and close IT tickets in C# with PostgreSQL persistence.",
+                    subtitle: "A C#-based system to create, list, and resolve IT tickets, featuring PostgreSQL data persistence.",
                     btn: "View on GitHub"
                 },
 
                 two: {
                     title: "SQL Load Management",
-                    subtitle: "System to organize and query loads using PostgreSQL and SQL scripts focused on operational routines.",
+                    subtitle: "A system designed to organize and query cargo loads utilizing PostgreSQL and optimized SQL scripts for operational routines.",
                     btn: "View on GitHub"
                 },
 
                 thr: {
                     title: "2D Educational Game",
-                    subtitle: "Educational game developed to raise awareness about SDG 2 in an interactive and accessible way.",
+                    subtitle: "An educational game developed to raise awareness about SDG 2 in an interactive and accessible manner.",
                     btn: "Play"
                 },
 
                 four: {
                     title: "E-commerce Planning (Final Project)",
-                    subtitle: "Final course project developed in a group during the Technical Administration course, analyzing e-commerce operations, logistics, security, payment methods, and digital market trends.",
+                    subtitle: "Final capstone project developed in a group during the Technical Administration program, analyzing e-commerce operations, logistics, security, payment methods, and digital market trends.",
 
                     descrip: "E-commerce",
                     descrip2: "Administration",
@@ -423,7 +423,7 @@ function setActiveLanguage(lang) {
                 description: "Let's talk about opportunities",
                 inf: "Information",
                 name: "Your name",
-                email: "Your email",
+                email: "Your email address",
                 message: "Your message",
                 button: "Send Message"
             },
