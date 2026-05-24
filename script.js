@@ -11,23 +11,26 @@ window.addEventListener("scroll", function () {
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
+// EVENTO DO BOTÃO DE ABRIR/FECHAR MENU
 menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
     
     if (!mobileMenu.classList.contains("hidden")) {
         menuBtn.textContent = "✕";
-        document.body.style.overflow = "hidden"; // ISSO TRAVA O FUNDO COMPLETAMENTE
+        // Trava apenas o scroll do elemento HTML principal, deixando containers fixed rolarem
+        document.documentElement.style.overflow = "hidden"; 
     } else {
         menuBtn.textContent = "☰";
-        document.body.style.overflow = ""; // ISSO LIBERA O FUNDO DE VOLTA
+        document.documentElement.style.overflow = ""; // Libera de volta
     }
 });
 
+// EVENTO DE CLICAR EM UM LINK DO MENU
 document.querySelectorAll("#mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
         menuBtn.textContent = "☰";
-        document.body.style.overflow = ""; // GARANTE QUE LIBERA SE CLICAR NO LINK
+        document.documentElement.style.overflow = ""; // Garante a liberação ao navegar
     });
 });
 
