@@ -324,7 +324,7 @@ function setActiveLanguage(lang) {
                 about: "About",
                 skills: "Skills",
                 experience: "Experience",
-                recommendation: "Letter",
+                recommendation: "Recommendation Letter",
                 projects: "Projects",
                 contact: "Contact"
             },
@@ -388,7 +388,7 @@ function setActiveLanguage(lang) {
 
             recom: {
                 title: "Letter of",
-                subtitle: "",
+                subtitle: "Recommendation",
                 description: "Letter issued by CADDI Soluções em Tecnologia following my performance as an IT intern.",
                 btn: "View Recommendation Letter"
             },
