@@ -11,26 +11,26 @@ window.addEventListener("scroll", function () {
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 
-// Abre e fecha o menu normalmente sem mexer na rolagem do sistema
 menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    menuBtn.textContent = mobileMenu.classList.contains("hidden") ? "☰" : "✕";
+    mobileMenu.classList.toggle("active");
+
+    menuBtn.textContent =
+        mobileMenu.classList.contains("active")
+            ? "✕"
+            : "☰";
 });
 
-// Fecha o menu se o usuário clicar em qualquer link interno
-document.querySelectorAll("#mobile-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) {
+        mobileMenu.classList.remove("active");
         menuBtn.textContent = "☰";
-    });
+    }
 });
 
-// EVENTO DE CLICAR EM UM LINK DO MENU
 document.querySelectorAll("#mobile-menu a").forEach(link => {
     link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("active");
         menuBtn.textContent = "☰";
-        document.documentElement.style.overflow = ""; // Garante a liberação ao navegar
     });
 });
 

@@ -68,3 +68,50 @@ html {
     background: transparent;
     color: rgba(212, 212, 216, 0.5);
 }
+
+/* =========================
+   MENU RESPONSIVO MODERNO
+========================= */
+
+.desktop-menu {
+    display: flex;
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* Touch devices */
+@media (pointer: coarse) {
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* Mouse / desktop */
+@media (pointer: fine) {
+
+    .desktop-menu {
+        display: flex;
+    }
+
+    .mobile-toggle,
+    .mobile-menu {
+        display: none !important;
+    }
+}
