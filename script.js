@@ -324,7 +324,7 @@ function setActiveLanguage(lang) {
                 about: "About",
                 skills: "Skills",
                 experience: "Experience",
-                recommendation: "Recommendation Letter",
+                recommendation: "Letter",
                 projects: "Projects",
                 contact: "Contact"
             },
